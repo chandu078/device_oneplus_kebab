@@ -395,7 +395,7 @@ PRODUCT_COPY_FILES += \
 # Sensors
 PRODUCT_PACKAGES += \
     als_correction_service.oplus_kona \
-    android.hardware.sensors@2.0-service.multihal.oplus_kona \
+    android.hardware.sensors@2.1-service.multihal.oplus_kona \
     libsensorndkbridge \
     sensors.oplus_kona
 
