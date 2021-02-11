@@ -1,3 +1,6 @@
+# FUSE passthrough
+persist.sys.fuse.passthrough.enable=true
+
 # Padding for Gboard from OOS
 ro.com.google.ime.kb_pad_port_l=7
 ro.com.google.ime.kb_pad_port_r=7
