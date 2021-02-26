@@ -6,6 +6,8 @@ persist.vendor.audio_hal.dsp_bit_width_enforce_mode=24
 persist.bluetooth.bqr.choppy_threshold=9,6
 persist.bluetooth.bqr.event_mask=0x8000000E
 persist.bluetooth.bqr.min_interval_ms=60000
+persist.vendor.bt.a2dp.aac_whitelist=false
+ro.bluetooth.library_name=libbluetooth_qti.so
 
 # Display
 debug.sf.enable_hwc_vds=1
