@@ -34,4 +34,7 @@
 
     <!-- Whether to enable lockscreen charging info settings -->
     <bool name="config_enable_charging_info">false</bool>
+
+    <!-- Defines custom Vendor sensor for pocket detection. -->
+    <string name="config_pocketJudgeVendorSensorName">oneplus.sensor.pocket</string>
 </resources>
