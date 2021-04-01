@@ -13,6 +13,45 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+soong_config_module_type {
+    name: "oplus_kona_sensors_hal_cc_defaults",
+    module_type: "cc_defaults",
+    config_namespace: "OPLUS_KONA_SENSORS",
+    value_variables: [
+        "ALS_POS_L",
+        "ALS_POS_T",
+        "ALS_POS_R",
+        "ALS_POS_B",
+        "ALS_SCREEN_WIDTH",
+        "ALS_SCREEN_HEIGHT",
+    ],
+    properties: ["cppflags"],
+}
+
+oplus_kona_sensors_hal_cc_defaults {
+    name: "oplus_kona_sensors_hal_defaults",
+    soong_config_variables: {
+        ALS_POS_L: {
+            cppflags: ["-DALS_POS_L=%s"],
+        },
+        ALS_POS_T: {
+            cppflags: ["-DALS_POS_T=%s"],
+        },
+        ALS_POS_R: {
+            cppflags: ["-DALS_POS_R=%s"],
+        },
+        ALS_POS_B: {
+            cppflags: ["-DALS_POS_B=%s"],
+        },
+        ALS_SCREEN_WIDTH: {
+            cppflags: ["-DALS_SCREEN_WIDTH=%s"],
+        },
+        ALS_SCREEN_HEIGHT: {
+            cppflags: ["-DALS_SCREEN_HEIGHT=%s"],
+        },
+    },
+}
+
 cc_binary {
     name: "android.hardware.sensors@2.0-service.multihal.oplus_kona",
     stem: "android.hardware.sensors@2.0-service.multihal",
@@ -22,6 +61,7 @@ cc_binary {
     vendor: true,
     relative_install_path: "hw",
     srcs: [
+        "AlsCorrection.cpp",
         "HalProxy.cpp",
         "HalProxyCallback.cpp",
         "service.cpp",
@@ -46,5 +86,34 @@ cc_binary {
     ],
     static_libs: [
         "android.hardware.sensors@1.0-convert",
+    ],
+    local_include_dirs: [
+        "include",
+    ],
+}
+
+cc_binary {
+    name: "als_correction_service.oplus_kona",
+    stem: "als_correction_service",
+    init_rc: ["als_correction_service.rc"],
+    defaults: [
+        "oplus_kona_sensors_hal_defaults",
+    ],
+    srcs: [
+        "als_correction_service.cpp",
+    ],
+    shared_libs: [
+        "libbase",
+        "libbinder",
+        "libgui",
+        "libui",
+        "libutils",
+        "liblog",
+    ],
+    cflags: [
+        "-DNO_INPUT",
+    ],
+    local_include_dirs: [
+        "include",
     ],
 }
