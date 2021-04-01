@@ -13,6 +13,26 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+soong_config_module_type {
+    name: "oneplus_kona_sensors_hal_cc_defaults",
+    module_type: "cc_defaults",
+    config_namespace: "ONEPLUS_KONA_SENSORS",
+    value_variables: ["ALS_POS_X", "ALS_POS_Y"],
+    properties: ["cppflags"],
+}
+
+oneplus_kona_sensors_hal_cc_defaults {
+    name: "oneplus_kona_sensors_hal_defaults",
+    soong_config_variables: {
+        ALS_POS_X: {
+            cppflags: ["-DALS_POS_X=%s"],
+        },
+        ALS_POS_Y: {
+            cppflags: ["-DALS_POS_Y=%s"],
+        },
+    },
+}
+
 cc_binary {
     name: "android.hardware.sensors@2.0-service.oneplus_kona",
     stem: "android.hardware.sensors@2.0-service.multihal",
@@ -22,6 +42,7 @@ cc_binary {
     vendor: true,
     relative_install_path: "hw",
     srcs: [
+        "AlsCorrection.cpp",
         "HalProxy.cpp",
         "HalProxyCallback.cpp",
         "service.cpp",
@@ -46,5 +67,29 @@ cc_binary {
     ],
     static_libs: [
         "android.hardware.sensors@1.0-convert",
+    ],
+    local_include_dirs: [
+        "include",
+    ],
+}
+
+cc_binary {
+    name: "als_correction_service.oneplus_kona",
+    stem: "als_correction_service",
+    init_rc: ["als_correction_service.rc"],
+    defaults: [
+        "oneplus_kona_sensors_hal_defaults",
+    ],
+    srcs: [
+        "als_correction_service.cpp",
+    ],
+    shared_libs: [
+        "libbase",
+        "libgui",
+        "libui",
+        "libutils",
+    ],
+    cflags: [
+        "-DNO_INPUT",
     ],
 }

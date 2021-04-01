@@ -185,11 +185,16 @@ ENABLE_VENDOR_RIL_SERVICE := true
 # Security patch level
 VENDOR_SECURITY_PATCH := 2022-01-01
 
+# Sensors
+SOONG_CONFIG_NAMESPACES += ONEPLUS_KONA_SENSORS
+SOONG_CONFIG_ONEPLUS_KONA_SENSORS := ALS_POS_X ALS_POS_Y
+
 # Sepolicy
 include device/qcom/sepolicy_vndr/SEPolicy.mk
 
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 PRODUCT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
+PRODUCT_PUBLIC_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/public
 
 # Verified Boot
 BOARD_AVB_ENABLE := true

@@ -1,0 +1,11 @@
+# Allow hal_sensors_default to send SIGUSR1 to als_correction_service
+allow hal_sensors_default als_correction_service:process signal;
+
+# Allow hal_sensors_default to get vendor_sensors_als_prop
+get_prop(hal_sensors_default, vendor_sensors_als_prop)
+
+# Allow hal_sensors_default to read files in mnt_vendor_file
+r_dir_file(hal_sensors_default, oem_file)
+
+# Allow hal_sensors_default to read graphics sysfs nodes
+r_dir_file(hal_sensors_default, vendor_sysfs_graphics)
