@@ -391,7 +391,6 @@ vendor/lib64/libsysmon_cdsp_skel.so
 
 # Charger
 vendor/bin/dashd
-vendor/bin/wlchgd
 vendor/etc/init/vendor.qti.hardware.charger_monitor@1.0-service.rc
 
 # CNE
