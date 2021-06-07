@@ -43,6 +43,11 @@
     <string name="dc_mode_title">DC Dimming</string>
     <string name="tile_dc_mode">DC Dimming</string>
 
+    <!-- Dolby -->
+    <string name="dolby_category">Dolby</string>
+    <string name="dolby_title">Dolby Atmos</string>
+    <string name="dolby_summary">Configure the audio output based on media content</string>
+
     <!-- Doze -->
     <string name="ambient_enable">Use ambient display</string>
     <string name="ambient_display_enable_summary">Wake screen when you receive notifications</string>
