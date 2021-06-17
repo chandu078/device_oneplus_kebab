@@ -1,1 +1,2 @@
 binder_call(cameraserver, hal_cameraHIDL_default)
+allow cameraserver hal_cameraHIDL_hwservice:hwservice_manager find;
