@@ -1,2 +1,6 @@
 # Allow system_server to read Fast Charging status
 allow system_server vendor_sysfs_battery_supply:file { getattr open read };
+
+allow system_server proc_touchpanel:dir search;
+
+allow system_server vendor_proc_shs:dir search;

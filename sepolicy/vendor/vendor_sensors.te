@@ -1,3 +1,4 @@
 r_dir_file(vendor_sensors, sysfs_project_info)
 r_dir_file(vendor_sensors, oem_file)
 allow vendor_sensors oem_file:file r_file_perms;
+allow vendor_sensors oem_file:dir search;
