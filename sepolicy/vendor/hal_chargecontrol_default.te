@@ -1,0 +1,2 @@
+allow hal_chargecontrol_default vendor_sysfs_usb_supply:file rw_file_perms;
+allow hal_chargecontrol_default vendor_sysfs_usb_supply:dir search;
