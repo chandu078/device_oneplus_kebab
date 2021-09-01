@@ -44,6 +44,9 @@ on early-boot
     restorecon /sys/class/leds/vibrator/state
 
 on boot
+    # Charger
+    chown system system /sys/class/oplus_chg/battery/mmi_charging_enable
+
     # Display
     chown system system /dev/oplus_display
     chown system system /sys/kernel/oplus_display/dimlayer_bl_en
