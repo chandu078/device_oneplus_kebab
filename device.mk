@@ -404,6 +404,8 @@ PRODUCT_PACKAGES += \
 # OMX
 PRODUCT_PACKAGES += \
     init.qti.media.sh \
+    android.hardware.media.omx@1.0-impl \
+    android.hardware.media.omx@1.0-service \
     libOmxAacEnc \
     libOmxAmrEnc \
     libOmxCore \
@@ -412,7 +414,8 @@ PRODUCT_PACKAGES += \
     libOmxQcelp13Enc \
     libOmxVdec \
     libOmxVenc \
-    libstagefrighthw
+    libstagefrighthw \
+    libstagefright_omx.vendor
 
 # OnePlus-fwk
 PRODUCT_PACKAGES += \
