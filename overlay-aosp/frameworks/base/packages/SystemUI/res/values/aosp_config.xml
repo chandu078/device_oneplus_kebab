@@ -27,4 +27,7 @@
     <!-- Burn-in protection -->
     <bool name="config_statusBarBurnInProtection">true</bool>
     <integer name="config_shift_interval">40</integer>
+
+    <!-- Location on the screen of the center of the Physical Power Button. -->
+    <dimen name="physical_power_button_center_screen_location_y">900px</dimen>
 </resources>
