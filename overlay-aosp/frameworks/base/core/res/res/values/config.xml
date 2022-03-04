@@ -48,4 +48,7 @@
     <!-- Whether to enable lockscreen charging info settings -->
     <bool name="config_enable_charging_info">false</bool>
 
+    <!-- Exempt CNE from privacy (location) indicators -->
+    <string name="config_systemTelephonyPackage" translatable="false">com.qualcomm.qti.cne</string>
+
 </resources>
