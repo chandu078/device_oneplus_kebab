@@ -1,7 +1,7 @@
 # Binaries
 /(vendor|system/vendor)/bin/dashd                      u:object_r:dashd_exec:s0
 /(vendor|system/vendor)/bin/opf-service                u:object_r:opf_exec:s0
-/(vendor|system/vendor)/bin/tri-state-key-calibrate    u:object_r:tri-state-key-calibrate_exec:s0
+/(vendor|system/vendor)/bin/tri-state-key_daemon       u:object_r:tri-state-key_daemon_exec:s0
 /(vendor|system/vendor)/bin/vl53l1_daemon_main         u:object_r:vl53l1_daemon_main_exec:s0
 /(vendor|system/vendor)/bin/wlchgd                     u:object_r:wlchgd_exec:s0
 
@@ -47,6 +47,10 @@
 /dev/stmvl53l1_ranging    u:object_r:vl53l1_device:s0
 /dev/wlchg                u:object_r:wlchg_device:s0
 
+# Display Modes
+/sys/devices/platform/soc/ae00000\.qcom\,mdss_mdp/drm/card0/card0-DSI-1/dimlayer_bl_en    u:object_r:sysfs_dm:s0
+/sys/devices/platform/soc/ae00000\.qcom\,mdss_mdp/drm/card0/card0-DSI-1/hbm               u:object_r:sysfs_dm:s0
+
 # HALs
 /(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.3-service\.oneplus_kona       u:object_r:hal_fingerprint_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.lineage\.touch@1\.0-service\.oneplus_kona                           u:object_r:hal_lineage_touch_default_exec:s0
@@ -57,6 +61,9 @@
 /(vendor|system/vendor)/bin/hw/vendor\.oneplus\.hardware\.param@1\.0-service                               u:object_r:hal_param_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.pixelworks\.hardware\.display\.iris-service                         u:object_r:hal_graphics_composer_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.pixelworks\.hardware\.feature\.irisfeature-service                  u:object_r:hal_graphics_composer_default_exec:s0
+
+# FPS Info
+/sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/sde-crtc-0/measured_fps         u:object_r:sysfs_dm:s0
 
 # OP1, OP2 files
 /mnt/vendor/op1(/.*)?    u:object_r:op1_file:s0
@@ -100,3 +107,10 @@
 /sys/devices/virtual/misc/msm_qcelp/wakeup[0-9]+(/.*)? u:object_r:sysfs_wakeup:s0
 /sys/devices/virtual/misc/msm_wma/wakeup[0-9]+(/.*)? u:object_r:sysfs_wakeup:s0
 /sys/devices/virtual/misc/msm_wmapro/wakeup[0-9]+(/.*)? u:object_r:sysfs_wakeup:s0
+
+# Touchpanel
+/proc/touchpanel/force_game_switch_enable   u:object_r:proc_touchpanel:s0
+/proc/touchpanel/tpedge_limit_enable        u:object_r:proc_touchpanel:s0
+
+# Vibrator
+/sys/devices/platform/soc/a8c000.i2c/i2c-3/3-005a/leds/vibrator/level                     u:object_r:sysfs_vibrator:s0
