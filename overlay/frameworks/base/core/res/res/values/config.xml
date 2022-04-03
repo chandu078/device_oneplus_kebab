@@ -653,7 +653,7 @@
          -->
     <string translatable="false" name="config_mainBuiltInDisplayCutoutRectApproximation">
         M 0,0
-        H 164
+        H 156
         V 102.5
         H 0
         Z
