@@ -19,6 +19,7 @@ persist.vendor.audio.voicecall.speaker.stereo=true
 persist.vendor.audio_hal.dsp_bit_width_enforce_mode=24
 ro.audio.monitorRotation=true
 ro.config.media_vol_steps=30
+ro.config.vc_call_vol_steps=9
 ro.vendor.audio.sdk.fluencetype=fluence
 ro.vendor.audio.sdk.ssr=false
 ro.vendor.dolby.dax.version=DAX3_3.5.6.11_r1
@@ -123,7 +124,9 @@ ro.soc.model=SM8250
 
 # Crypto
 ro.crypto.allow_encrypt_override=true
+ro.crypto.dm_default_key.options_format.version=2
 ro.crypto.volume.filenames_mode=aes-256-cts
+ro.crypto.volume.metadata.method=dm-default-key
 
 # Display
 ro.vendor.display.sensortype=2
