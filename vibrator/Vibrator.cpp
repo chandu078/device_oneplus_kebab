@@ -56,13 +56,6 @@ namespace vibrator {
 #define CUSTOM_DATA_LEN         3
 #define NAME_BUF_SIZE           32
 
-#define MSM_CPU_LAHAINA         415
-#define APQ_CPU_LAHAINA         439
-#define MSM_CPU_SHIMA           450
-#define MSM_CPU_SM8325          501
-#define APQ_CPU_SM8325P         502
-#define MSM_CPU_YUPIK           475
-
 static const char ACTIVATE_PATH[] = "/sys/class/leds/vibrator/activate";
 static const char BRIGHTNESS_PATH[] = "/sys/class/leds/vibrator/brightness";
 static const char DURATION_PATH[] = "/sys/class/leds/vibrator/duration";
@@ -181,14 +174,12 @@ static std::vector<std::vector<std::pair<std::string, std::string>>> VIBRATOR_CO
 InputFFDevice::InputFFDevice()
 {
     DIR *dp;
-    FILE *fp = NULL;
     struct dirent *dir;
     uint8_t ffBitmask[FF_CNT / 8];
     char devicename[PATH_MAX];
     const char *INPUT_DIR = "/dev/input/";
     char name[NAME_BUF_SIZE];
     int fd, ret;
-    int soc = property_get_int32("ro.vendor.qti.soc_id", -1);
 
     mVibraFd = INVALID_VALUE;
     mSupportGain = false;
@@ -247,23 +238,6 @@ InputFFDevice::InputFFDevice()
             if (test_bit(FF_GAIN, ffBitmask))
                 mSupportGain = true;
 
-            if (soc <= 0 && (fp = fopen("/sys/devices/soc0/soc_id", "r")) != NULL) {
-                fscanf(fp, "%u", &soc);
-                fclose(fp);
-            }
-            switch (soc) {
-            case MSM_CPU_LAHAINA:
-            case APQ_CPU_LAHAINA:
-            case MSM_CPU_SHIMA:
-            case MSM_CPU_SM8325:
-            case APQ_CPU_SM8325P:
-            case MSM_CPU_YUPIK:
-                mSupportExternalControl = true;
-                break;
-            default:
-                mSupportExternalControl = false;
-                break;
-            }
             break;
         }
 
