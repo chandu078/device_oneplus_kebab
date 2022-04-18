@@ -125,48 +125,30 @@ static std::map<Effect, std::vector<std::pair<std::string, std::string>>> LED_EF
     }},
     { Effect::HEAVY_CLICK, {
         { IGNORE_STORE_PATH, "0" },
-        { DURATION_PATH, "100" },
+        { DURATION_PATH, "15" },
         { VMAX_PATH, "0x1f" },
-        { GAIN_PATH, "0x96" },
-        { SEQ_PATH, "0x00 0x03" },
+        { GAIN_PATH, "0x3e" },
+        { SEQ_PATH, "0x00 0x07" },
         { LOOP_PATH, "0x00 0x00" },
         { BRIGHTNESS_PATH, "1" },
     }}
 };
 
 static std::vector<std::vector<std::pair<std::string, std::string>>> VIBRATOR_CONSTANTS{
-    {   // 1ms - 80ms
+    {   // 1ms - 101ms
         { IGNORE_STORE_PATH, "0\n" },
         { DURATION_PATH, "0" },         // placeholder
-        { SEQ_PATH, "0x00 0x01" },
+        { SEQ_PATH, "0x00 0x07" },
         { GAIN_PATH, "0" },             // placeholder
         { VMAX_PATH, "0x1f" },
         { LOOP_PATH, "0x00 0x00" },
         { BRIGHTNESS_PATH, "1" },
     },
-    {   // 81ms - 90ms
+    {   // 102ms+
         { IGNORE_STORE_PATH, "0\n" },
         { DURATION_PATH, "0" },         // placeholder
-        { SEQ_PATH, "0x00 0x02" },
+        { VMAX_PATH, "0x1f" },
         { GAIN_PATH, "0" },             // placeholder
-        { VMAX_PATH, "0x1f" },
-        { LOOP_PATH, "0x00 0x00" },
-        { BRIGHTNESS_PATH, "1" },
-    },
-    {   // 91ms - 100ms
-        { IGNORE_STORE_PATH, "0\n" },
-        { DURATION_PATH, "0" },         // placeholder
-        { SEQ_PATH, "0x00 0x03" },
-        { GAIN_PATH, "0" },             // placeholder
-        { VMAX_PATH, "0x1f" },
-        { LOOP_PATH, "0x00 0x00" },
-        { BRIGHTNESS_PATH, "1" },
-    },
-    {   // 100ms+
-        { IGNORE_STORE_PATH, "0\n" },
-        { DURATION_PATH, "0" },         // placeholder
-        { VMAX_PATH, "0x1f" },
-        { GAIN_PATH, "0x80" },
         { ACTIVATE_PATH, "1" },
     }
 };
@@ -456,11 +438,10 @@ int LedVibratorDevice::write_value(const char *file, const char *value) {
 int LedVibratorDevice::on(int32_t timeoutMs) {
     int ret;
 
-    int index = (timeoutMs < 81) ? 0 : (timeoutMs < 91) ? 1 :
-                (timeoutMs < 101) ? 2 : 3;
-    int gain = 4 + 1.24*timeoutMs;
-    if (gain > 128) {
-        gain = 128;             // 0x80
+    int index = (timeoutMs < 102) ? 0 : 1;
+    int gain = 8 + 0.67 * timeoutMs;
+    if (timeoutMs > 101) {
+        gain = 128;    // 0x80
     }
     ALOGD("QTI Vibrator on for %d ms with a gain of 0x%x", timeoutMs, gain);
     for (const auto &[path, value] : VIBRATOR_CONSTANTS[index]) {
