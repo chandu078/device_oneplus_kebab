@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="bc_welcome_message">‏به OnePlus خوش‌آمدید</string>
+    <string name="deferred_setup_wizard_title">‏راه‌اندازی Nameless-AOSP را تمام کنید</string>
+    <string name="device_name">OnePlus 9R</string>
+    <string name="setup_wizard_title">‏راه‌اندازی Nameless-AOSP</string>
+</resources>

@@ -322,6 +322,7 @@ PRODUCT_PACKAGES += \
     FrameworksResTarget \
     OPlusFrameworksResCommon \
     OPlusFrameworksResTarget \
+    OnePlus8TPixelSetupWizardResTarget \
     OPlusSettingsResCommon \
     OPlusSettingsProviderResTarget \
     OPlusSystemUIResTarget \
@@ -331,6 +332,7 @@ PRODUCT_PACKAGES += \
 # Overlay-oneplus9r
 PRODUCT_PACKAGES += \
     OnePlus9RPowerProfileResTarget \
+    OnePlus9RPixelSetupWizardResTarget \
     OnePlus9RSettingsProviderResTarget \
     OnePlus9RWifiResTarget
 

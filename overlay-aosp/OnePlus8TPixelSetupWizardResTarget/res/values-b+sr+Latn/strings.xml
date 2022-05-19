@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="bc_welcome_message">Dobro došli u OnePlus</string>
+    <string name="deferred_setup_wizard_title">Dovršite podešavanje Nameless-AOSP-a</string>
+    <string name="device_name">OnePlus 8T</string>
+    <string name="setup_wizard_title">Podešavanje Nameless-AOSP-a</string>
+</resources>
