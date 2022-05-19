@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="bc_welcome_message">‏مرحبًا بك في هاتف OnePlus</string>
+    <string name="deferred_setup_wizard_title">‏إكمال إعداد Nameless-AOSP</string>
+    <string name="device_name">OnePlus 8T</string>
+    <string name="setup_wizard_title">‏إعداد Nameless-AOSP</string>
+</resources>
