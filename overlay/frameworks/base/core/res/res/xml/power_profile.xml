@@ -140,8 +140,8 @@
         <value>547.75</value>
         <value>638.17</value>
     </array>
-    <item name="cpu.idle">6</item>
-    <item name="cpu.awake">8</item>
+    <item name="cpu.suspend">6</item>
+    <item name="cpu.idle">8</item>
     <item name="battery.capacity">4500</item>
     <array name="wifi.batchedscan">
         <value>.0002</value>
