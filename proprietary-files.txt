@@ -726,16 +726,15 @@ vendor/bin/hw/vendor.oneplus.hardware.ifaa@2.0-service
 vendor/etc/init/vendor.oneplus.hardware.ifaa@2.0-service.rc
 vendor/lib64/vendor.oneplus.hardware.ifaa@2.0.so
 
-# IMS (system)
-system_ext/lib64/lib-imsvideocodec.so
-system_ext/lib64/lib-imsvt.so
-system_ext/lib64/lib-imsvtextutils.so
-system_ext/lib64/lib-imsvtutils.so
-system_ext/lib64/libdiag_system.so
-system_ext/lib64/libimscamera_jni.so
-system_ext/lib64/libimsmedia_jni.so
-system_ext/lib64/vendor.qti.imsrtpservice@3.0.so
--system_ext/priv-app/ims/ims.apk
+# IMS (system) - from LA.QSSI.12.0.r1-07000.03-qssi.0
+system_ext/lib64/lib-imsvideocodec.so|c4139d995d33ed798b8b08d374c539c2042dbbf1
+system_ext/lib64/lib-imsvt.so|3de5881767ee963d8816ba70904466b80791760f
+system_ext/lib64/lib-imsvtextutils.so|bf6b02f56dffd673f4ca552fcbedcaeef2f4de7f
+system_ext/lib64/lib-imsvtutils.so|f102f77716bf720ad493155e7c4675f3218e46eb
+system_ext/lib64/libimscamera_jni.so|0c73d281a46af67545b1772b539d2fbda7bf8385
+system_ext/lib64/libimsmedia_jni.so|390cae1cc7549987fb8d85ff3e56cca2a300fdc7
+system_ext/lib64/vendor.qti.imsrtpservice@3.0.so|cfb8cc03e6aa405694b47bc9cb1d41b7bd545ceb
+-system_ext/priv-app/ims/ims.apk|3a4f1bebb7a54ca91e07c6055e6811148fa51959
 
 # IMS (vendor)
 vendor/bin/ims_rtp_daemon
@@ -1090,15 +1089,18 @@ vendor/lib64/libqmi_csi.so
 vendor/lib64/libqmi_encdec.so
 vendor/lib64/libqmiservices.so
 
+# RIL (system) - from LA.QSSI.12.0.r1-07000.03-qssi.0
+-system_ext/app/QtiTelephonyService/QtiTelephonyService.apk|73112cdd5925e6bdf6c51949ec9bce4477ee8814
+system_ext/etc/permissions/qcrilhook.xml|30397e293b2c40e6b7a1d11c2a615cdd05de625a
+system_ext/etc/permissions/telephony_system-ext_privapp-permissions-qti.xml|4f0056403f56928b8c75a617ba582f17061f89ae
+-system_ext/framework/qcrilhook.jar|da67e8893aadf3e8b1c9cb1ca82a469c6062575b
+-system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|0acedaf8b03bf0f7ba45b76d6e563795498f92fd
+
 # RIL (system)
 -system/framework/qcnvitems.jar
--system_ext/app/QtiTelephonyService/QtiTelephonyService.apk
-system_ext/etc/permissions/qcrilhook.xml
 system_ext/etc/permissions/qti_libpermissions.xml
 system_ext/etc/permissions/qti_permissions.xml
 system_ext/etc/permissions/telephonyservice.xml
--system_ext/framework/qcrilhook.jar
--system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 
 # RIL (vendor)
 -vendor/app/IWlanService/IWlanService.apk
