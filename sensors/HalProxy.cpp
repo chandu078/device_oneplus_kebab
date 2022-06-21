@@ -484,9 +484,9 @@ void HalProxy::initializeSensorList() {
                     ALOGV("Loaded sensor: %s", sensor.name.c_str());
                     sensor.sensorHandle = setSubHalIndex(sensor.sensorHandle, subHalIndex);
                     setDirectChannelFlags(&sensor, mSubHalList[subHalIndex]);
-                    if (static_cast<int>(sensor.type) == SENSOR_TYPE_QTI_HARDWARE_LIGHT) {
+                    if (sensor.type == SensorType::LIGHT
+                            || static_cast<int>(sensor.type) == SENSOR_TYPE_QTI_HARDWARE_LIGHT) {
                         sensor.type = SensorType::LIGHT;
-                        ALOGV("Replaced QTI Light sensor with standard light sensor");
                         AlsCorrection::init();
                     }
                     mSensors[sensor.sensorHandle] = sensor;
@@ -660,7 +660,8 @@ void HalProxy::postEventsToMessageQueue(const std::vector<Event>& eventsList, si
     }
     std::vector<Event> events(eventsList);
     for (auto& event : events) {
-        if (static_cast<int>(event.sensorType) == SENSOR_TYPE_QTI_HARDWARE_LIGHT) {
+        if (event.sensorType == SensorType::LIGHT
+                || static_cast<int>(event.sensorType) == SENSOR_TYPE_QTI_HARDWARE_LIGHT) {
             AlsCorrection::correct(event.u.scalar);
         }
     }
