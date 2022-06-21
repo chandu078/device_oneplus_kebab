@@ -35,7 +35,6 @@ using android::sp;
 using android::SurfaceComposerClient;
 using android::SyncScreenCaptureListener;
 
-constexpr int ALS_RADIUS = 64;
 constexpr int SCREENSHOT_INTERVAL = 1;
 
 void updateScreenBuffer() {
@@ -53,10 +52,10 @@ void updateScreenBuffer() {
         captureArgs.displayToken = SurfaceComposerClient::getInternalDisplayToken();
         captureArgs.pixelFormat = PixelFormat::RGBA_8888;
         captureArgs.sourceCrop = Rect(
-                ALS_POS_X - ALS_RADIUS, ALS_POS_Y - ALS_RADIUS,
-                ALS_POS_X + ALS_RADIUS, ALS_POS_Y + ALS_RADIUS);
-        captureArgs.width = ALS_RADIUS * 2;
-        captureArgs.height = ALS_RADIUS * 2;
+                ALS_POS_L, ALS_POS_T,
+                ALS_POS_R, ALS_POS_B);
+        captureArgs.width = ALS_POS_R - ALS_POS_L;
+        captureArgs.height = ALS_POS_B - ALS_POS_T;
         captureArgs.useIdentityTransform = true;
         sp<SyncScreenCaptureListener> captureListener = new SyncScreenCaptureListener();
         if (ScreenshotClient::captureDisplay(captureArgs, captureListener) == android::NO_ERROR) {

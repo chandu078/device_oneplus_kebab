@@ -17,18 +17,24 @@ soong_config_module_type {
     name: "oneplus_kona_sensors_hal_cc_defaults",
     module_type: "cc_defaults",
     config_namespace: "ONEPLUS_KONA_SENSORS",
-    value_variables: ["ALS_POS_X", "ALS_POS_Y"],
+    value_variables: ["ALS_POS_L", "ALS_POS_T", "ALS_POS_R", "ALS_POS_B"],
     properties: ["cppflags"],
 }
 
 oneplus_kona_sensors_hal_cc_defaults {
     name: "oneplus_kona_sensors_hal_defaults",
     soong_config_variables: {
-        ALS_POS_X: {
-            cppflags: ["-DALS_POS_X=%s"],
+        ALS_POS_L: {
+            cppflags: ["-DALS_POS_L=%s"],
         },
-        ALS_POS_Y: {
-            cppflags: ["-DALS_POS_Y=%s"],
+        ALS_POS_T: {
+            cppflags: ["-DALS_POS_T=%s"],
+        },
+        ALS_POS_R: {
+            cppflags: ["-DALS_POS_R=%s"],
+        },
+        ALS_POS_B: {
+            cppflags: ["-DALS_POS_B=%s"],
         },
     },
 }
