@@ -87,9 +87,8 @@ void AlsCorrection::correct(float& light) {
         // Substract scaled correction if light - correction_scaled >= 0
         light -= correction_scaled;
     } else {
-        // In low light conditions, sensor is just reporting bad values, using
-        // computed correction instead allows to fix the issue
-        light = correction;
+        // In low light conditions, hardcode the reading to 0.
+        light = 0.0f;
     }
     ALOGV("Corrected reading: %f", light);
 }
