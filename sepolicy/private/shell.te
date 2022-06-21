@@ -1,0 +1,2 @@
+# Allow shell to get vendor_sensors_als_prop
+get_prop(shell, vendor_sensors_als_prop)
