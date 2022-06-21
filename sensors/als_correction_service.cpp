@@ -15,9 +15,11 @@
  */
 
 #include <android-base/properties.h>
+#include <binder/IBinder.h>
 #include <binder/ProcessState.h>
 #include <gui/SurfaceComposerClient.h>
 #include <gui/SyncScreenCaptureListener.h>
+#include <ui/DisplayState.h>
 
 #include <cstdio>
 #include <signal.h>
@@ -26,9 +28,12 @@
 
 using android::base::SetProperty;
 using android::gui::ScreenCaptureResults;
+using android::ui::DisplayState;
 using android::ui::PixelFormat;
+using android::ui::Rotation;
 using android::DisplayCaptureArgs;
 using android::GraphicBuffer;
+using android::IBinder;
 using android::Rect;
 using android::ScreenshotClient;
 using android::sp;
@@ -48,12 +53,22 @@ void updateScreenBuffer() {
 
     if (now.tv_sec - lastScreenUpdate >= SCREENSHOT_INTERVAL) {
         // Update Screenshot at most every second
-        DisplayCaptureArgs captureArgs;
-        captureArgs.displayToken = SurfaceComposerClient::getInternalDisplayToken();
+        sp<IBinder> display = SurfaceComposerClient::getInternalDisplayToken();
+        DisplayCaptureArgs captureArgs = {};
+        DisplayState state = {};
+        SurfaceComposerClient::getDisplayState(display, &state);
+        captureArgs.displayToken = display;
         captureArgs.pixelFormat = PixelFormat::RGBA_8888;
-        captureArgs.sourceCrop = Rect(
-                ALS_POS_L, ALS_POS_T,
-                ALS_POS_R, ALS_POS_B);
+        if (state.orientation == Rotation::Rotation0
+                || state.orientation == Rotation::Rotation180) {
+            captureArgs.sourceCrop = Rect(
+                    ALS_POS_L, ALS_POS_T,
+                    ALS_POS_R, ALS_POS_B);
+        } else {
+            captureArgs.sourceCrop = Rect(
+                    ALS_SCREEN_WIDTH - ALS_POS_R, ALS_SCREEN_HEIGHT - ALS_POS_B,
+                    ALS_SCREEN_WIDTH - ALS_POS_L, ALS_SCREEN_HEIGHT - ALS_POS_T);
+        }
         captureArgs.width = ALS_POS_R - ALS_POS_L;
         captureArgs.height = ALS_POS_B - ALS_POS_T;
         captureArgs.useIdentityTransform = true;
