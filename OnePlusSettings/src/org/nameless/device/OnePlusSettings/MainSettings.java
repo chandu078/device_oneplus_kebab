@@ -235,10 +235,10 @@ public class MainSettings extends PreferenceFragment
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         final Context context = getContext();
         if (preference == mMuteMedia) {
-            Boolean enabled = (Boolean) newValue;
+            boolean enabled = (Boolean) newValue;
             VolumeUtils.setEnabled(context, enabled);
         } else if (preference == mAutoHBMSwitch) {
-            Boolean enabled = (Boolean) newValue;
+            boolean enabled = (Boolean) newValue;
             HBMUtils.setAutoHBMEnabled(context, enabled);
             HBMUtils.enableService(context);
         } else if (preference == mFpsInfo) {
