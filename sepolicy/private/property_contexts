@@ -48,3 +48,6 @@ vendor.oppo.num.denoise                                 u:object_r:ctl_default_p
 vendor.oppo.rawhdr.algo                                 u:object_r:ctl_default_prop:s0
 vendor.oppo.rotate.dump                                 u:object_r:ctl_default_prop:s0
 vendor.oppo.scale.enable                                u:object_r:ctl_default_prop:s0
+
+# Sensors
+vendor.sensors.als_correction.                          u:object_r:vendor_sensors_als_prop:s0
