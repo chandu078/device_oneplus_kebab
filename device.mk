@@ -211,11 +211,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     vendor.kscope.chgctrl@1.0-service.oneplus_kona
 
-# Component overrides
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/misc/component-overrides.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sysconfig/component-overrides.xml \
-    $(LOCAL_PATH)/configs/misc/component-overrides_qti.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/component-overrides.xml
-
 # Device init scripts
 PRODUCT_PACKAGES += \
     fstab.qcom \
