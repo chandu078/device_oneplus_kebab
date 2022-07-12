@@ -79,7 +79,7 @@ TARGET_USES_QTI_MAPPER_EXTENSIONS_1_1 := true
 TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs
 
 # Fingerprint
-TARGET_SURFACEFLINGER_UDFPS_LIB := //hardware/oplus:libudfps_extension.oplus
+TARGET_SURFACEFLINGER_UDFPS_LIB := //$(COMMON_PATH):libudfps_extension.oplus_kona
 
 # HIDL
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
@@ -88,10 +88,9 @@ DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
     vendor/lineage/config/device_framework_matrix.xml
 DEVICE_MATRIX_FILE := $(COMMON_PATH)/compatibility_matrix.xml
 DEVICE_MANIFEST_FILE := $(COMMON_PATH)/manifest.xml
-ODM_MANIFEST_FILES := $(COMMON_PATH)/manifest_odm.xml
 
 # Init
-TARGET_INIT_VENDOR_LIB := //$(COMMON_PATH):libinit_oplus
+TARGET_INIT_VENDOR_LIB := //$(COMMON_PATH):libinit_oplus_kona
 
 # Kernel
 BOARD_BOOT_HEADER_VERSION := 2
@@ -166,7 +165,7 @@ VENDOR_SECURITY_PATCH := 2022-05-05
 
 # SEPolicy
 include device/qcom/sepolicy_vndr/SEPolicy.mk
-include hardware/oplus/sepolicy/qti/SEPolicy.mk
+include $(COMMON_PATH)/sepolicy/SEPolicy.mk
 
 # Verified Boot
 BOARD_AVB_ENABLE := true
