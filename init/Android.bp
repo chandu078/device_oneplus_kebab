@@ -4,10 +4,10 @@
 //
 
 cc_library_static {
-    name: "libinit_oplus",
+    name: "libinit_oplus_kona",
     recovery_available: true,
     shared_libs: ["libbase"],
-    srcs: ["init_oplus.cpp"],
+    srcs: ["init_oplus_kona.cpp"],
 }
 
 prebuilt_etc {

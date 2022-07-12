@@ -1,0 +1,30 @@
+cc_binary {
+    name: "android.hardware.biometrics.fingerprint@2.3-service.oplus_kona",
+    defaults: ["hidl_defaults"],
+    init_rc: ["android.hardware.biometrics.fingerprint@2.3-service.oplus_kona.rc"],
+    vintf_fragments: ["android.hardware.biometrics.fingerprint@2.3-service.oplus_kona.xml"],
+    vendor: true,
+    relative_install_path: "hw",
+    srcs: [
+        "BiometricsFingerprint.cpp",
+        "service.cpp",
+    ],
+    shared_libs: [
+        "libbase",
+        "libhidlbase",
+        "libutils",
+        "android.hardware.biometrics.fingerprint@2.1",
+        "android.hardware.biometrics.fingerprint@2.2",
+        "android.hardware.biometrics.fingerprint@2.3",
+        "vendor.oplus.hardware.biometrics.fingerprint@2.1",
+    ],
+    header_libs: ["kernel_headers.oplus_kona"],
+}
+
+cc_library_static {
+    name: "libudfps_extension.oplus_kona",
+    srcs: ["UdfpsExtension.cpp"],
+    include_dirs: [
+        "frameworks/native/services/surfaceflinger/CompositionEngine/include",
+    ],
+}
