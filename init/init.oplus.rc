@@ -3,6 +3,9 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 #
+on early-init
+    # Audio Driver
+    exec u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules audio_extend audio_max98937 audio_tfa98xx-v6 audio_ak4376
 
 on fs
     # Charger
@@ -31,6 +34,12 @@ on early-boot
     write /sys/bus/msm_subsys/devices/subsys10/restart_level RELATED
     write /sys/bus/msm_subsys/devices/subsys11/restart_level RELATED
 
+    # Vibrator
+    restorecon /sys/class/leds/vibrator/activate
+    restorecon /sys/class/leds/vibrator/brightness
+    restorecon /sys/class/leds/vibrator/duration
+    restorecon /sys/class/leds/vibrator/state
+
 on boot
     # Display
     chown system system /dev/oplus_display
@@ -39,6 +48,7 @@ on boot
     chown system system /sys/kernel/oplus_display/hbm
     chown system system /sys/kernel/oplus_display/notify_fppress
     chown system system /sys/kernel/oplus_display/panel_serial_number
+    chown system system /sys/kernel/oplus_display/power_current
 
     # Sensors
     chown system system /sys/devices/platform/soc/soc:sensor_fb/adsp_notify

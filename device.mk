@@ -333,7 +333,14 @@ PRODUCT_PACKAGES += \
     OPlusSettingsResCommon \
     OPlusSettingsProviderResTarget \
     OPlusSystemUIResTarget \
+    OnePlus8TWifiResTarget \
     WifiResTarget
+
+# Overlay-oneplus9r
+PRODUCT_PACKAGES += \
+    OnePlus9RPowerProfileResTarget \
+    OnePlus9RSettingsProviderResTarget \
+    OnePlus9RWifiResTarget
 
 # Overlay-qssi
 PRODUCT_PACKAGES += \

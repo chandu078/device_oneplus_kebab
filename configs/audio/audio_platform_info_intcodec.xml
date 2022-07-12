@@ -244,10 +244,6 @@
         <device name="SND_DEVICE_OUT_SPEAKER_VOICE_PLAYBACK_EFFECT" acdb_id="190"/>
         <device name="SND_DEVICE_OUT_HEADPHONES_VOICE_PLAYBACK_EFFECT" acdb_id="10"/>
         <!--Jianfeng.Qiu@PSW.MM.AudioDriver.feature.1611397, 2019/04/17, Add for VoiceScence end-->
-        <!--Run.zhang@MULTIMEDIA.AUDIODRIVER.HAL, 2021/08/18, add for HAC-->
-        <device name="SND_DEVICE_OUT_VOICE_HAC_HANDSET" acdb_id="103"/>
-        <device name="SND_DEVICE_IN_VOICE_HAC_HANDSET_DMIC" acdb_id="105"/>
-        <!--Run.zhang@MULTIMEDIA.AUDIODRIVER.HAL, 2021/08/18, add for HAC end-->
         <!-- Kaijia.Lin@PSW.MM.AudioDriver.HAL, 2019/10/12, Add for dummy dev START -->
         <device name="SND_DEVICE_OUT_DUMMY" acdb_id="15"/>
         <!-- Kaijia.Lin@PSW.MM.AudioDriver.HAL, 2019/10/12, Add for dummy dev END -->
@@ -272,23 +268,6 @@
         <!--Kai.Lv@MULTIMEDIA.AUDIODRIVER.FEATURE, 2020/04/22, Add for hearing test START -->
         <device name="SND_DEVICE_IN_HANDSET_MIC_HEARING_TEST" acdb_id="34"/>
         <!--Kai.Lv@MULTIMEDIA.AUDIODRIVER.FEATURE, 2020/04/22, Add for hearing test END -->
-        <!-- voice MIC device force using acdb id 41 and 43 -->
-        <device name="SND_DEVICE_IN_VOICE_SPEAKER_MIC" acdb_id="43"/>
-        <device name="SND_DEVICE_IN_HANDSET_TMIC" acdb_id="41"/>
-        <device name="SND_DEVICE_IN_VOICE_SPEAKER_TMIC" acdb_id="43"/>
-        <!-- VOIP MIC device force using acdb id, 108 and 114 for 1MIC, 111 and 117 for 2MIC, 156 and 160 for 3MIC -->
-        <device name="SND_DEVICE_IN_HANDSET_MIC_AEC" acdb_id="108"/>
-        <device name="SND_DEVICE_IN_HANDSET_MIC_NS" acdb_id="108"/>
-        <device name="SND_DEVICE_IN_SPEAKER_MIC_AEC" acdb_id="114"/>
-        <device name="SND_DEVICE_IN_SPEAKER_MIC_NS" acdb_id="114"/>
-        <device name="SND_DEVICE_IN_HANDSET_DMIC_AEC" acdb_id="111"/>
-        <device name="SND_DEVICE_IN_HANDSET_DMIC_NS" acdb_id="111"/>
-        <device name="SND_DEVICE_IN_SPEAKER_DMIC_AEC" acdb_id="117"/>
-        <device name="SND_DEVICE_IN_SPEAKER_DMIC_NS" acdb_id="117"/>
-        <device name="SND_DEVICE_IN_HANDSET_TMIC_AEC" acdb_id="156"/>
-        <device name="SND_DEVICE_IN_HANDSET_TMIC_NS" acdb_id="156"/>
-        <device name="SND_DEVICE_IN_SPEAKER_TMIC_AEC" acdb_id="160"/>
-        <device name="SND_DEVICE_IN_SPEAKER_TMIC_NS" acdb_id="160"/>
         <!-- Voice Recognition device force using acdb id, 107 for 1MIC, 109 for 2MIC, 125 for 3MIC(default) -->
         <device name="SND_DEVICE_IN_VOICE_REC_MIC" acdb_id="107"/>
         <device name="SND_DEVICE_IN_VOICE_REC_MIC_AEC" acdb_id="107"/>
@@ -296,7 +275,6 @@
         <device name="SND_DEVICE_IN_VOICE_REC_DMIC_STEREO" acdb_id="109"/>
         <device name="SND_DEVICE_IN_VOICE_REC_DMIC_FLUENCE" acdb_id="109"/>
         <!-- end Voice Recognition device force using acdb id, 107 for 1MIC, 109 for 2MIC, 125 for 3MIC(default) -->
-        <device name="SND_DEVICE_IN_SVA_RE_MIC" acdb_id="143"/>
         <device name="SND_DEVICE_OUT_VOICE_HANDSET_TMUS" acdb_id="7"/>
         <device name="SND_DEVICE_IN_VOICE_DMIC_TMUS" acdb_id="41"/>
     </acdb_ids>
@@ -329,10 +307,6 @@
         <device name="SND_DEVICE_OUT_SPEAKER_AND_HEADPHONES_EXTERNAL_2" backend="speaker-and-headphones" interface="TERT_MI2S_RX-and-RX_CDC_DMA_RX_0"/>
         <device name="SND_DEVICE_OUT_VOICE_HANDSET" interface="TERT_MI2S_RX"/>
         <device name="SND_DEVICE_OUT_VOICE_HANDSET_TMUS" interface="TERT_MI2S_RX"/>
-        <!--Run.Zhang@MULTIMEDIA.AUDIODRIVER.HAL, 2021/08/18, add for HAC-->
-        <device name="SND_DEVICE_IN_VOICE_HAC_HANDSET_DMIC" interface="TX_CDC_DMA_TX_3"/>
-        <device name="SND_DEVICE_OUT_VOICE_HAC_HANDSET" interface="TERT_MI2S_RX"/>
-        <!--Run.zhang@MULTIMEDIA.AUDIODRIVER.HAL, 2021/08/18, add for HAC end-->
         <device name="SND_DEVICE_IN_HANDSET_GENERIC_QMIC" interface="TX_CDC_DMA_TX_3"/>
         <device name="SND_DEVICE_OUT_VOICE_SPEAKER" backend="speaker" interface="TERT_MI2S_RX"/>
         <device name="SND_DEVICE_OUT_VOICE_SPEAKER_STEREO" backend="speaker" interface="TERT_MI2S_RX"/>
@@ -545,7 +519,6 @@
         <device name="SND_DEVICE_IN_SPEAKER_TMIC_NS" interface="TX_CDC_DMA_TX_3"/>
         <device name="SND_DEVICE_IN_SPEAKER_TMIC_AEC_NS" interface="TX_CDC_DMA_TX_3"/>
         <!--Zhao.Pan@MULTIMEDIA.AUDIODRIVER.HAL, Add for tmic interface-->
-        <device name="SND_DEVICE_IN_SVA_RE_MIC" interface="TX_CDC_DMA_TX_3"/>
     </backend_names>
     <!-- below values are for ref purpose to OEM, doesn't contain actual hardware info on MTP -->
     <microphone_characteristics>
