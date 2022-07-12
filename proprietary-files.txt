@@ -1,5 +1,5 @@
 ## All proprietary files from this list, unless pinned and noted otherwise, are
-## from OnePlus 8T (KB2005_11.C.21).
+## from OnePlus 9R (LE2101_11_C.21).
 
 # ACDBs (odm)
 odm/etc/acdbdata/Audio_Parameter_Version.txt
@@ -161,11 +161,11 @@ odm/lib64/camera/com.qti.tuned.qtech_imx481.bin
 odm/lib64/camera/com.qti.tuned.semco_imx586.bin
 odm/lib64/camera/com.qti.tuned.shine_gc5035.bin
 odm/lib64/camera/com.qti.tuned.truly_imx471.bin
-odm/lib64/camera/com.qti_kebab.sensor.gc02m1b.so
-odm/lib64/camera/com.qti_kebab.sensor.gc5035.so
-odm/lib64/camera/com.qti_kebab.sensor.imx471.so
-odm/lib64/camera/com.qti_kebab.sensor.imx481.so
-odm/lib64/camera/com.qti_kebab.sensor.imx586.so
+odm/lib64/camera/com.qti_lemonades.sensor.gc02m1b.so
+odm/lib64/camera/com.qti_lemonades.sensor.gc5035.so
+odm/lib64/camera/com.qti_lemonades.sensor.imx471.so
+odm/lib64/camera/com.qti_lemonades.sensor.imx481.so
+odm/lib64/camera/com.qti_lemonades.sensor.imx586.so
 odm/lib64/camera/fdconfigpreview.bin
 odm/lib64/camera/fdconfigpreviewlite.bin
 odm/lib64/camera/fdconfigvideo.bin
@@ -730,7 +730,9 @@ vendor/lib64/vendor.qti.gnss@4.0.so
 my_product/etc/sysconfig/com.android.hotwordenrollment.common.util.xml:product/etc/sysconfig/com.android.hotwordenrollment.common.util.xml
 my_product/framework/com.android.hotwordenrollment.common.util.jar:product/framework/com.android.hotwordenrollment.common.util.jar
 my_product/priv-app/HotwordEnrollmentOKGoogleHEXAGON.apk:product/priv-app/HotwordEnrollmentOKGoogleHEXAGON.apk
-my_product/priv-app/HotwordEnrollmentXGoogleHEXAGON.apk:product/priv-app/HotwordEnrollmentXGoogleHEXAGON.apk
+
+# HotwordEnrollmentXGoogleHEXAGON - from OnePlus 8T KB2005_11.C.21
+my_product/priv-app/HotwordEnrollmentXGoogleHEXAGON.apk:product/priv-app/HotwordEnrollmentXGoogleHEXAGON.apk|45ff9d3250a0d2213052349174b4c22b8781e101
 
 # IMS (system) - from renoir - 22.5.11
 system_ext/app/ImsRcsService/ImsRcsService.apk|d03d3142f3518e755d02ace26b17170218ed8b4b
@@ -819,24 +821,43 @@ vendor/firmware/ipa_uc.mdt
 # Iris (odm)
 odm/bin/hw/vendor.pixelworks.hardware.feature.irisfeature-service
 odm/etc/init/vendor.pixelworks.hardware.feature.irisfeature-service.rc
-odm/etc/inparm/irissoft/inParm1.txt
+odm/etc/inparm/irissoft/inParm.lst
 odm/etc/inparm/irissoft/inParm10.txt
 odm/etc/inparm/irissoft/inParm11.txt
 odm/etc/inparm/irissoft/inParm12.txt
-odm/etc/inparm/irissoft/inParm13.txt
-odm/etc/inparm/irissoft/inParm14.txt
-odm/etc/inparm/irissoft/inParm15.txt
-odm/etc/inparm/irissoft/inParm16.txt
-odm/etc/inparm/irissoft/inParm17.txt
-odm/etc/inparm/irissoft/inParm18.txt
-odm/etc/inparm/irissoft/inParm2.txt
-odm/etc/inparm/irissoft/inParm3.txt
-odm/etc/inparm/irissoft/inParm4.txt
-odm/etc/inparm/irissoft/inParm5.txt
-odm/etc/inparm/irissoft/inParm6.txt
-odm/etc/inparm/irissoft/inParm7.txt
-odm/etc/inparm/irissoft/inParm8.txt
-odm/etc/inparm/irissoft/inParm9.txt
+odm/etc/inparm/irissoft/inParm14_a.txt
+odm/etc/inparm/irissoft/inParm14_b.txt
+odm/etc/inparm/irissoft/inParm14_c.txt
+odm/etc/inparm/irissoft/inParm16_center.txt
+odm/etc/inparm/irissoft/inParm16_down.txt
+odm/etc/inparm/irissoft/inParm16_up.txt
+odm/etc/inparm/irissoft/inParm17_center.txt
+odm/etc/inparm/irissoft/inParm17_down.txt
+odm/etc/inparm/irissoft/inParm17_up.txt
+odm/etc/inparm/irissoft/inParm18_center.txt
+odm/etc/inparm/irissoft/inParm18_down.txt
+odm/etc/inparm/irissoft/inParm18_up.txt
+odm/etc/inparm/irissoft/inParm1_center.txt
+odm/etc/inparm/irissoft/inParm1_down.txt
+odm/etc/inparm/irissoft/inParm1_up.txt
+odm/etc/inparm/irissoft/inParm2_center.txt
+odm/etc/inparm/irissoft/inParm2_down.txt
+odm/etc/inparm/irissoft/inParm2_up.txt
+odm/etc/inparm/irissoft/inParm3_center.txt
+odm/etc/inparm/irissoft/inParm3_down.txt
+odm/etc/inparm/irissoft/inParm3_up.txt
+odm/etc/inparm/irissoft/inParm4_center.txt
+odm/etc/inparm/irissoft/inParm4_down.txt
+odm/etc/inparm/irissoft/inParm4_up.txt
+odm/etc/inparm/irissoft/inParm5_center.txt
+odm/etc/inparm/irissoft/inParm5_down.txt
+odm/etc/inparm/irissoft/inParm5_up.txt
+odm/etc/inparm/irissoft/inParm6_center.txt
+odm/etc/inparm/irissoft/inParm6_down.txt
+odm/etc/inparm/irissoft/inParm6_up.txt
+odm/etc/inparm/irissoft/inParm8_a.txt
+odm/etc/inparm/irissoft/inParm8_b.txt
+odm/etc/inparm/irissoft/inParm8_c.txt
 odm/etc/inparm/irissoft/mcfCheck.txt
 odm/etc/vintf/manifest/vendor.pixelworks.hardware.display.iris-service.xml
 odm/etc/vintf/manifest/vendor.pixelworks.hardware.feature.irisfeature-service.xml
@@ -1174,22 +1195,17 @@ odm/lib64/android.hardware.secure_element@1.0-impl.so
 odm/bin/hw/vendor.oplus.hardware.oplusSensor@1.0-service
 odm/bin/oplus_sensor_fb
 odm/etc/init/vendor.oplus.hardware.oplusSensor@1.0-service.rc
-odm/etc/sensor/config/kona_T0_sx9324_0.json
-odm/etc/sensor/config/kona_T0_sx9324up_0.json
-odm/etc/sensor/config/kona_ak991x_0.json
-odm/etc/sensor/config/kona_bmi26x_0.json
-odm/etc/sensor/config/kona_mmc5603x_0.json
+odm/etc/sensor/config/kona_qrd_ak991x_0.json
 odm/etc/sensor/config/kona_qrd_alsps.json
 odm/etc/sensor/config/kona_qrd_bmi26x_0.json
 odm/etc/sensor/config/kona_qrd_cct.json
 odm/etc/sensor/config/kona_qrd_cct_rear.json
 odm/etc/sensor/config/kona_qrd_icm4x6xx.json
+odm/etc/sensor/config/kona_qrd_lps22hh_0.json
 odm/etc/sensor/config/kona_qrd_lsm6dso.json
+odm/etc/sensor/config/kona_qrd_mmc56x3x.json
 odm/etc/sensor/config/kona_qrd_sx933x_0.json
-odm/etc/sensor/config/kona_stk2232_0.json
-odm/etc/sensor/config/kona_sx9324_0.json
-odm/etc/sensor/config/kona_sx9324up_0.json
-odm/etc/sensor/config/kona_tcs3408.json
+odm/etc/sensor/config/kona_qrd_tcs3408_rear.json
 odm/etc/sensor/sensor_config.json
 odm/etc/vintf/manifest/manifest_oplusSensor.xml
 odm/lib64/liboplus_service.so
@@ -1197,6 +1213,7 @@ odm/lib64/vendor.oplus.hardware.oplusSensor@1.0.so
 
 # Sensors (vendor)
 vendor/bin/hw/vendor.qti.hardware.sensorscalibrate@1.0-service
+vendor/bin/init.qcom.sensors.sh
 vendor/bin/sensors.qti
 vendor/bin/sscrpcd
 vendor/etc/init/init.vendor.sensors.rc
@@ -1977,9 +1994,7 @@ odm/firmware/aw8697_haptic_172.bin
 odm/firmware/aw8697_haptic_174.bin
 odm/firmware/aw8697_haptic_235.bin
 odm/firmware/aw8697_haptic_235_19161.bin
-odm/firmware/aw8697_high_temp_high_humidity_channel_RTP_51_160HZ.bin
 odm/firmware/aw8697_high_temp_high_humidity_channel_RTP_51_160Hz.bin
-odm/firmware/aw8697_high_temp_high_humidity_channel_RTP_51_162HZ.bin
 odm/firmware/aw8697_high_temp_high_humidity_channel_RTP_51_162Hz.bin
 odm/firmware/aw8697_high_temp_high_humidity_channel_RTP_51_164Hz.bin
 odm/firmware/aw8697_high_temp_high_humidity_channel_RTP_51_166Hz.bin
@@ -2316,9 +2331,12 @@ odm/firmware/ringtone_Cloud_RTP.bin
 odm/firmware/ringtone_Cyclotron_RTP.bin
 odm/firmware/ringtone_Distinct_RTP.bin
 odm/firmware/ringtone_Dynamic_RTP.bin
+odm/firmware/ringtone_Eager.bin
+odm/firmware/ringtone_Ebullition.bin
 odm/firmware/ringtone_Echo_RTP.bin
 odm/firmware/ringtone_Expect_RTP.bin
 odm/firmware/ringtone_Fanatical_RTP.bin
+odm/firmware/ringtone_Friendship.bin
 odm/firmware/ringtone_Funky_RTP.bin
 odm/firmware/ringtone_Guitar_RTP.bin
 odm/firmware/ringtone_Harping_RTP.bin

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2022 The Nameless-AOSP Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.android.providers.settings.overlay.oplus.oneplus9r">
+    <overlay
+        android:isStatic="true"
+        android:priority="354"
+        android:requiredSystemPropertyName="ro.product.device"
+        android:requiredSystemPropertyValue="OnePlus9R"
+        android:targetPackage="com.android.providers.settings" />
+</manifest>

@@ -121,6 +121,29 @@ void vendor_load_properties() {
           break;
       }
       break;
+       /* OnePlus 9R */
+    case 20828:
+          device = "OnePlus9R";
+            /* Override usb name to OnePlus 9R */
+          property_override("vendor.usb.product_string", "OnePlus 9R");
+      switch (rf_version){
+            /* China */
+      case 11:
+          name = "OnePlus9R_CN";
+          model = "LE2100";
+          break;
+            /* India */
+      case 13:
+          name = "OnePlus9R_IN";
+          model = "LE2101";
+          break;
+            /* Generic */
+      default:
+          name = "OnePlus9R_IN";
+          model = "LE2101";
+          break;
+      }
+      break;
   }
 
     set_ro_build_prop("device", device);
