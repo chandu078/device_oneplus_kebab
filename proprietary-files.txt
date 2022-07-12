@@ -1,7 +1,17 @@
 ## All proprietary files from this list, unless pinned and noted otherwise, are
-## from OnePlus 8 Pro (IN2025_11.C.33).
+## from OnePlus 8T (KB2005_11.C.33).
 
-# ACDBs
+# ACDBs (odm)
+odm/etc/acdbdata/Audio_Parameter_Version.txt
+odm/etc/acdbdata/Bluetooth_cal.acdb
+odm/etc/acdbdata/General_cal.acdb
+odm/etc/acdbdata/Global_cal.acdb
+odm/etc/acdbdata/Handset_cal.acdb
+odm/etc/acdbdata/Hdmi_cal.acdb
+odm/etc/acdbdata/Headset_cal.acdb
+odm/etc/acdbdata/Speaker_cal.acdb
+
+# ACDBs (vendor)
 vendor/etc/acdbdata/adsp_avs_config.acdb
 
 # ADSP
@@ -12,7 +22,7 @@ vendor/lib/vendor.qti.hardware.dsp@1.0.so
 vendor/lib64/libadsp_default_listener.so
 vendor/lib64/vendor.qti.hardware.dsp@1.0.so
 
-# ADSP modules
+# ADSP modules (odm)
 odm/lib/rfsa/adsp/hta_lib/libhta_dsp_skel.so
 odm/lib/rfsa/adsp/libaiboost_skel.so
 odm/lib/rfsa/adsp/libaiboost_skel_v65.so
@@ -27,6 +37,8 @@ odm/lib/rfsa/adsp/libktvns.so
 odm/lib/rfsa/adsp/libktvpitchshift.so
 odm/lib/rfsa/adsp/libktvreverb.so
 odm/lib/rfsa/adsp/libktvvolume.so
+
+# ADSP modules (vendor)
 vendor/lib/rfsa/adsp/capi_v2_aptX_CLHDADV_Encoder.so
 vendor/lib/rfsa/adsp/capi_v2_aptX_CLHDAD_Speech_Decoder.so
 vendor/lib/rfsa/adsp/libBeautyShot_skel.so
@@ -88,13 +100,16 @@ vendor/lib/libhdmipassthru.so
 vendor/lib/libqtigef.so
 vendor/lib64/libadsprpc.so
 
+# Audio firmware
+odm/firmware/tfa98xx.cnt
+
 # Bluetooth
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti
 vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc
 vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so
 vendor/lib64/libbtnv.so
 
-# Bluetooth (A2DP)
+# Bluetooth A2DP
 vendor/lib/hw/audio.bluetooth_qti.default.so
 vendor/lib/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so
 vendor/lib/hw/vendor.qti.hardware.bluetooth_audio@2.1-impl.so
@@ -117,15 +132,40 @@ vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so
 vendor/lib64/vendor.qti.hardware.fm@1.0.so
 
-# Bluetooth (aptX) - from crosshatch - RQ1A.201205.003
+# Bluetooth aptX - from crosshatch - RQ1A.201205.003
 system_ext/lib64/libaptXHD_encoder.so|e13fa70c97caaa24d061678bdee608eb8850a69e
 system_ext/lib64/libaptX_encoder.so|df1c89d7af1bb35808d5fe3496b04ba066c10cbc
 
-# Camera
+# Camera (odm)
+odm/etc/camera/ashdr/ncf_pack.ncf
+odm/etc/camera/ashdr/ncf_pack_imx471.ncf
+odm/etc/camera/ashdr/ncf_pack_imx481.ncf
+odm/etc/camera/ashdr/ncf_pack_imx586.ncf
+odm/etc/camera/darksight/darksight_main.bin
+odm/etc/camera/darksight/darksight_ultrawide.bin
+odm/etc/camera/calibrationOutput_uw.bin
+odm/etc/camera/distortion_result.bin
 odm/etc/camera/fb_default
 odm/etc/camera/fwk_config.json
+odm/lib64/camera/components/com.oneplus.node.cfrsnapshot.so
+odm/lib64/camera/components/com.oneplus.node.cfrvideo.so
 odm/lib64/camera/components/com.qti.stats.pdlib.so
 odm/lib64/camera/components/libipebpsstriping.so
+odm/lib64/camera/com.qti.sensormodule.holitech_gc02m1b.bin
+odm/lib64/camera/com.qti.sensormodule.qtech_imx481.bin
+odm/lib64/camera/com.qti.sensormodule.semco_imx586.bin
+odm/lib64/camera/com.qti.sensormodule.shine_gc5035.bin
+odm/lib64/camera/com.qti.sensormodule.truly_imx471.bin
+odm/lib64/camera/com.qti.tuned.holitech_gc02m1b.bin
+odm/lib64/camera/com.qti.tuned.qtech_imx481.bin
+odm/lib64/camera/com.qti.tuned.semco_imx586.bin
+odm/lib64/camera/com.qti.tuned.shine_gc5035.bin
+odm/lib64/camera/com.qti.tuned.truly_imx471.bin
+odm/lib64/camera/com.qti_kebab.sensor.gc02m1b.so
+odm/lib64/camera/com.qti_kebab.sensor.gc5035.so
+odm/lib64/camera/com.qti_kebab.sensor.imx471.so
+odm/lib64/camera/com.qti_kebab.sensor.imx481.so
+odm/lib64/camera/com.qti_kebab.sensor.imx586.so
 odm/lib64/camera/fdconfigpreview.bin
 odm/lib64/camera/fdconfigpreviewlite.bin
 odm/lib64/camera/fdconfigvideo.bin
@@ -134,6 +174,8 @@ odm/lib64/libSonyIMX471RmscLibrary.so
 odm/lib64/libfastov_dsp.so
 odm/lib64/libormshalclient.so
 odm/lib64/vendor.oplus.hardware.cammidasservice@1.0.so
+
+# Camera (vendor)
 vendor/etc/camera/M_Attribute_AG_BMW_1.1.0.model.hardcode
 vendor/lib/libc++_shared.so
 vendor/lib/libnightvision.so
@@ -497,7 +539,7 @@ vendor/lib64/vendor.display.color@1.4.so
 vendor/lib64/vendor.display.color@1.5.so
 vendor/lib64/vendor.display.postproc@1.0.so
 
-# DPM
+# DPM (system)
 system_ext/bin/dpmd
 system_ext/bin/tcmd
 system_ext/etc/dpm/dpm.conf
@@ -517,6 +559,8 @@ system_ext/lib64/libdpmtcm.so
 system_ext/lib64/vendor.qti.diaghal@1.0.so
 system_ext/lib64/vendor.qti.hardware.dpmservice@1.0.so
 system_ext/priv-app/dpmserviceapp/dpmserviceapp.apk
+
+# DPM (vendor)
 vendor/bin/dpmQmiMgr
 vendor/etc/init/dpmQmiMgr.rc
 vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so
@@ -583,6 +627,26 @@ odm/lib64/libgf_ud_hal_18865_G3_oplus.so
 odm/lib64/libgf_ud_hal_20801_G3_oplus.so
 odm/lib64/vendor.oplus.hardware.commondcs@1.0.so
 
+# Fingerprint firmware
+odm/vendor/firmware/gfp9638.b00
+odm/vendor/firmware/gfp9638.b01
+odm/vendor/firmware/gfp9638.b02
+odm/vendor/firmware/gfp9638.b03
+odm/vendor/firmware/gfp9638.b04
+odm/vendor/firmware/gfp9638.b05
+odm/vendor/firmware/gfp9638.b06
+odm/vendor/firmware/gfp9638.b07
+odm/vendor/firmware/gfp9638.mdt
+odm/vendor/firmware/gfp9678.b00
+odm/vendor/firmware/gfp9678.b01
+odm/vendor/firmware/gfp9678.b02
+odm/vendor/firmware/gfp9678.b03
+odm/vendor/firmware/gfp9678.b04
+odm/vendor/firmware/gfp9678.b05
+odm/vendor/firmware/gfp9678.b06
+odm/vendor/firmware/gfp9678.b07
+odm/vendor/firmware/gfp9678.mdt
+
 # Gatekeeper
 vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti
 vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc
@@ -635,9 +699,11 @@ vendor/firmware/a650_zap.mdt
 vendor/lib/hw/vulkan.adreno.so
 vendor/lib64/hw/vulkan.adreno.so
 
-# GNSS
+# GNSS (odm)
 odm/etc/izat.conf
 odm/etc/sap.conf
+
+# GNSS (vendor)
 vendor/app/CACertService/CACertService.apk
 vendor/bin/hw/android.hardware.gnss@2.1-service-qti
 vendor/bin/loc_launcher
@@ -706,7 +772,7 @@ my_product/framework/com.android.hotwordenrollment.common.util.jar:product/frame
 my_product/priv-app/HotwordEnrollmentOKGoogleHEXAGON.apk:product/priv-app/HotwordEnrollmentOKGoogleHEXAGON/HotwordEnrollmentOKGoogleHEXAGON.apk
 my_product/priv-app/HotwordEnrollmentXGoogleHEXAGON.apk:product/priv-app/HotwordEnrollmentXGoogleHEXAGON/HotwordEnrollmentXGoogleHEXAGON.apk
 
-# IMS - from renoir - 22.5.11
+# IMS (system) - from renoir - 22.5.11
 system_ext/app/ImsRcsService/ImsRcsService.apk|d03d3142f3518e755d02ace26b17170218ed8b4b
 system_ext/app/QtiTelephony/QtiTelephony.apk|f2ea59dfc69126c83905979e2d55d7c5f02e15e1
 system_ext/etc/permissions/telephony_system-ext_privapp-permissions-qti.xml|a7e114ea1e6909685ce49717a2b5b66d8275d419
@@ -724,7 +790,7 @@ system_ext/lib64/libimsmedia_jni.so|9f192af40439abb04d5d5f0f3de5b772c9381114
 system_ext/lib64/vendor.qti.imsrtpservice@3.0.so|0c11ff5a7a671073ee40e17d46aa8b7acbf1dc0a
 system_ext/priv-app/ims/ims.apk|f0d834acbc77e7830459e0246f5073e1b9ba8657
 
-# IMS
+# IMS (vendor)
 vendor/bin/ims_rtp_daemon
 vendor/bin/imsdatadaemon
 vendor/bin/imsqmidaemon
@@ -790,7 +856,7 @@ vendor/firmware/ipa_uc.b02
 vendor/firmware/ipa_uc.elf
 vendor/firmware/ipa_uc.mdt
 
-# Iris
+# Iris (odm)
 odm/bin/hw/vendor.pixelworks.hardware.feature.irisfeature-service
 odm/etc/init/vendor.pixelworks.hardware.feature.irisfeature-service.rc
 odm/etc/vintf/manifest/vendor.pixelworks.hardware.display.iris-service.xml
@@ -808,12 +874,22 @@ odm/lib64/libpwsoftirisPCS.so
 odm/lib64/vendor.pixelworks.hardware.display@1.0.so
 odm/lib64/vendor.pixelworks.hardware.display@1.1.so
 odm/lib64/vendor.pixelworks.hardware.feature@1.0.so
+
+# Iris (vendor)
 vendor/lib64/libpwirisfeature.so
 vendor/lib64/libpwirishalwrapper.so
 
 # IRQ balance
 vendor/bin/msm_irqbalance
 vendor/etc/msm_irqbalance.conf
+
+# Keymaster
+vendor/bin/hw/android.hardware.keymaster@4.1-service-qti
+vendor/etc/init/android.hardware.keymaster@4.1-service-qti.rc
+vendor/lib64/libkeymasterdeviceutils.so
+vendor/lib64/libkeymasterprovision.so
+vendor/lib64/libkeymasterutils.so
+vendor/lib64/libqtikeymaster4.so
 
 # Listen
 vendor/lib/hw/sound_trigger.primary.kona.so
@@ -826,10 +902,12 @@ vendor/lib/libgcs.so
 vendor/lib/liblistensoundmodel2.so
 vendor/lib/libmulawdec.so
 
-# Media
+# Media (system)
 system_ext/lib/libmmosal.so
 system_ext/lib/libmmparser_lite.so
 system_ext/lib64/libmmosal.so
+
+# Media (vendor)
 vendor/etc/media_codecs.xml
 vendor/etc/media_codecs_c2.xml
 vendor/etc/media_codecs_kona.xml
@@ -943,9 +1021,13 @@ vendor/lib64/libqti-perfd-client.so
 vendor/lib64/libqti-perfd.so
 vendor/lib64/libqti-util.so
 
-# Power-off alarm
+# Power-off alarm (product)
 product/app/PowerOffAlarm/PowerOffAlarm.apk|d6d473476375d9bee5f082e62b5244d016909efa
+
+# Power-off alarm (system)
 system_ext/framework/vendor.qti.hardware.alarm-V1.0-java.jar
+
+# Power-off alarm (vendor)
 vendor/bin/hw/vendor.qti.hardware.alarm@1.0-service
 vendor/bin/power_off_alarm
 vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc
@@ -955,9 +1037,11 @@ vendor/lib64/vendor.qti.hardware.alarm@1.0.so
 # QCC
 vendor/lib64/vendor.qti.hardware.qccsyshal@1.0.so
 
-# QMI
+# QMI (system)
 system/etc/permissions/privapp-permissions-qti.xml
 system/etc/sysconfig/qti_whitelist.xml
+
+# QMI (vendor)
 vendor/bin/irsc_util
 vendor/bin/qmipriod
 vendor/etc/init/qmipriod.rc
@@ -996,16 +1080,20 @@ vendor/lib64/libqmi_encdec.so
 vendor/lib64/libqmi_legacy.so
 vendor/lib64/libqmiservices.so
 
-# RIL
+# RIL (odm)
 odm/lib64/vendor.oplus.hardware.appradio@1.0.so
 odm/lib64/vendor.oplus.hardware.ims@1.0.so
 odm/lib64/vendor.oplus.hardware.radio@1.0.so
+
+# RIL (system)
 system_ext/app/QtiTelephonyService/QtiTelephonyService.apk
 system_ext/etc/permissions/qcrilhook.xml
 system_ext/etc/permissions/qti_libpermissions.xml
 system_ext/etc/permissions/qti_permissions.xml
 system_ext/framework/qcrilhook.jar
 system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
+
+# RIL (vendor)
 vendor/app/IWlanService/IWlanService.apk
 vendor/bin/hw/qcrild
 vendor/bin/ATFWD-daemon
@@ -1102,13 +1190,32 @@ odm/bin/hw/vendor.qti.secure_element@1.2-service
 odm/etc/init/vendor.qti.secure_element@1.2-service.rc
 odm/lib64/android.hardware.secure_element@1.0-impl.so
 
-# Sensors
+# Sensors (odm)
 odm/bin/hw/vendor.oplus.hardware.oplusSensor@1.0-service
 odm/bin/oplus_sensor_fb
 odm/etc/init/vendor.oplus.hardware.oplusSensor@1.0-service.rc
+odm/etc/sensor/config/kona_T0_sx9324_0.json
+odm/etc/sensor/config/kona_T0_sx9324up_0.json
+odm/etc/sensor/config/kona_ak991x_0.json
+odm/etc/sensor/config/kona_bmi26x_0.json
+odm/etc/sensor/config/kona_mmc5603x_0.json
+odm/etc/sensor/config/kona_qrd_alsps.json
+odm/etc/sensor/config/kona_qrd_bmi26x_0.json
+odm/etc/sensor/config/kona_qrd_cct.json
+odm/etc/sensor/config/kona_qrd_cct_rear.json
+odm/etc/sensor/config/kona_qrd_icm4x6xx.json
+odm/etc/sensor/config/kona_qrd_lsm6dso.json
+odm/etc/sensor/config/kona_qrd_sx933x_0.json
+odm/etc/sensor/config/kona_stk2232_0.json
+odm/etc/sensor/config/kona_sx9324_0.json
+odm/etc/sensor/config/kona_sx9324up_0.json
+odm/etc/sensor/config/kona_tcs3408.json
+odm/etc/sensor/sensor_config.json
 odm/etc/vintf/manifest/manifest_oplusSensor.xml
 odm/lib64/liboplus_service.so
 odm/lib64/vendor.oplus.hardware.oplusSensor@1.0.so
+
+# Sensors (vendor)
 vendor/bin/hw/vendor.qti.hardware.sensorscalibrate@1.0-service
 vendor/bin/sensors.qti
 vendor/bin/sscrpcd
@@ -2253,9 +2360,11 @@ odm/firmware/shuntai24k_rtp.bin
 odm/firmware/t-jingle_RTP.bin
 odm/firmware/wentai24k_rtp.bin
 
-# VPP
+# VPP (odm)
 odm/lib/vendor.oplus.hardware.orms@1.0.so
 odm/lib64/vendor.oplus.hardware.orms@1.0.so
+
+# VPP (vendor)
 vendor/bin/vppservice
 vendor/etc/configstore/vpp.configstore.xml
 vendor/etc/init/vppservice_osie_sr.rc
@@ -2276,17 +2385,22 @@ vendor/lib64/vendor.qti.hardware.vpp@1.2.so
 vendor/lib64/vendor.qti.hardware.vpp@1.3.so
 vendor/lib64/vendor.qti.hardware.vpp@1.4.so
 
-# Widevine DRM
+# Widevine-DRM (odm)
 odm/bin/hw/android.hardware.drm@1.3-service.widevine
 odm/etc/init/android.hardware.drm@1.3-service.widevine.rc
 odm/etc/vintf/manifest/manifest_android.hardware.drm@1.3-service.widevine.xml
 odm/lib64/mediadrm/libwvdrmengine.so
 odm/lib64/liboemcrypto.so
 odm/lib64/libwvhidl.so
+
+# Widevine-DRM (vendor)
 vendor/lib64/libtrustedapploader.so
 
-# WiFi
+# WiFi (odm)
+odm/etc/wifi/bdwlan.elf
 odm/vendor/etc/wifi/WCNSS_qcom_cfg.ini
+
+# WiFi (vendor)
 vendor/bin/cnss-daemon
 vendor/etc/wifi/p2p_supplicant_overlay.conf
 vendor/etc/wifi/wpa_supplicant_overlay.conf

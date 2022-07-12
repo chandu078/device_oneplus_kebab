@@ -3,6 +3,6 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 #
-BOARD_VENDOR_SEPOLICY_DIRS += device/oneplus/sm8250-common/sepolicy/vendor
-SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += device/oneplus/sm8250-common/sepolicy/private
-SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += device/oneplus/sm8250-common/sepolicy/public
+BOARD_VENDOR_SEPOLICY_DIRS += device/oneplus/kebab/sepolicy/vendor
+SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += device/oneplus/kebab/sepolicy/private
+SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += device/oneplus/kebab/sepolicy/public
