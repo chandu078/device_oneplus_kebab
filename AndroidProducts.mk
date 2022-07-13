@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_kebab.mk
+    $(LOCAL_DIR)/aosp_kebab.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_kebab-user \
-    lineage_kebab-userdebug \
-    lineage_kebab-eng
+    aosp_kebab-user \
+    aosp_kebab-userdebug \
+    aosp_kebab-eng
