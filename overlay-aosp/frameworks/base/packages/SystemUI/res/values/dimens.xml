@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2022 The Nameless-AOSP Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+
+    <!-- StatusBar burn-in protection -->
+    <dimen name="horizontal_max_shift">2.0dp</dimen>
+    <dimen name="vertical_max_shift">1.0dp</dimen>
+
+</resources>
