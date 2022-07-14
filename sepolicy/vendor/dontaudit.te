@@ -1,0 +1,25 @@
+dontaudit {
+    hal_audio_default
+    hal_bluetooth_default
+    hal_graphics_composer_default
+    hal_sensors_default
+    rild
+    vendor_adpl
+    vendor_cnd
+    vendor_dpmd
+    vendor_hal_imsrtp
+    vendor_hal_rcsservice
+    vendor_ims
+    vendor_netmgrd
+    vendor_qtelephony
+    vendor_qti
+    vendor_sensors_qti
+} vendor_diag_device:chr_file rw_file_perms;
+
+dontaudit fsck self:capability kill;
+
+dontaudit kernel { vendor_debugfs_ipc vendor_debugfs_wlan }:dir search;
+
+dontaudit kernel self:qipcrtr_socket create;
+
+dontaudit vdc self:capability kill;
