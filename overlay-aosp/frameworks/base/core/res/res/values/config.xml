@@ -51,4 +51,7 @@
     <!-- Exempt CNE from privacy (location) indicators -->
     <string name="config_systemTelephonyPackage" translatable="false">com.qualcomm.qti.cne</string>
 
+    <!-- Path to fast charging status file to detect whether an OEM fast charger is active -->
+    <string name="config_oemFastChargerStatusPath" translatable="false">/sys/class/oplus_chg/battery/fast_charge</string>
+
 </resources>
