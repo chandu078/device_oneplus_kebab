@@ -1,3 +1,6 @@
+rw_dir_file(system_server, vendor_proc_engineer)
+rw_dir_file(system_server, vendor_proc_display)
+rw_dir_file(system_server, vendor_proc_oplus_version)
 rw_dir_file(system_server, vendor_proc_tri_state_key)
 
 allow system_server vendor_sysfs_battery_supply:file r_file_perms;
