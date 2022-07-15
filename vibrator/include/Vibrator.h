@@ -58,7 +58,6 @@ class LedVibratorDevice {
 public:
     LedVibratorDevice();
     int on(int32_t timeoutMs);
-    int onWaveform(int waveformIndex);
     int off();
     bool mDetected;
     int write_value(const char *file, const char *value);
