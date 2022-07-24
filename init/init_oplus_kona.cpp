@@ -113,6 +113,8 @@ void vendor_load_properties() {
         case 12:
           name = "OnePlus8T_TMO";
           model = "KB2007";
+           /* Force SIM configuration to ssss only on the TMO variant */
+            property_override("persist.radio.multisim.config", "ssss");
           break;
             /* Generic */
         default:
