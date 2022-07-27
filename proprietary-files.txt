@@ -349,49 +349,9 @@ vendor/etc/init/vendor.qti.hardware.charger_monitor@1.0-service.rc
 vendor/etc/charger_fstab.qti
 
 # Charger firmware
-odm/firmware/fastchg/19063/oplus_vooc_fw.bin
-odm/firmware/fastchg/19065/oplus_vooc_fw.bin
-odm/firmware/fastchg/19066/oplus_vooc_fw.bin
-odm/firmware/fastchg/19067/oplus_vooc_fw.bin
-odm/firmware/fastchg/19161/oplus_vooc_fw.bin
-odm/firmware/fastchg/19361/oplus_vooc_fw.bin
-odm/firmware/fastchg/19362/oplus_vooc_fw.bin
-odm/firmware/fastchg/19705/oplus_vooc_fw.bin
-odm/firmware/fastchg/19706/oplus_vooc_fw.bin
-odm/firmware/fastchg/19795/oplus_vooc_fw.bin
 odm/firmware/fastchg/19805/oplus_vooc_fw_rk826.bin
-odm/firmware/fastchg/19811/oplus_vooc_fw.bin
-odm/firmware/fastchg/19813/oplus_vooc_fw.bin
-odm/firmware/fastchg/19821/oplus_vooc_fw.bin
-odm/firmware/fastchg/19823/oplus_vooc_fw.bin
-odm/firmware/fastchg/19835/oplus_vooc_fw.bin
-odm/firmware/fastchg/19837/oplus_vooc_fw.bin
-odm/firmware/fastchg/19839/oplus_vooc_fw.bin
-odm/firmware/fastchg/19841/oplus_vooc_fw.bin
-odm/firmware/fastchg/19855/oplus_vooc_fw.bin
-odm/firmware/fastchg/20061/oplus_vooc_fw_rk826.bin
-odm/firmware/fastchg/20062/oplus_vooc_fw_rk826.bin
-odm/firmware/fastchg/20135/oplus_vooc_fw_rk826.bin
-odm/firmware/fastchg/20137/oplus_vooc_fw_rk826.bin
-odm/firmware/fastchg/20139/oplus_vooc_fw_rk826.bin
-odm/firmware/fastchg/20161/oplus_vooc_fw_rt5125.bin
-odm/firmware/fastchg/20163/oplus_vooc_fw_rt5125.bin
-odm/firmware/fastchg/20235/oplus_vooc_fw_rk826.bin
-odm/firmware/fastchg/20351/oplus_vooc_fw_rt5125.bin
-odm/firmware/fastchg/20607/oplus_vooc_fw.bin
-odm/firmware/fastchg/20806/oplus_vooc_fw_rk826.bin
-odm/firmware/fastchg/20807/oplus_vooc_fw_rk826.bin
-odm/firmware/fastchg/20808/oplus_vooc_fw_rk826.bin
 odm/firmware/fastchg/20809/oplus_vooc_fw_rk826.bin
-odm/firmware/fastchg/2080E/oplus_vooc_fw_rk826.bin
-odm/firmware/fastchg/20819/oplus_vooc_fw_rk826.bin
 odm/firmware/fastchg/20828/oplus_vooc_fw_rk826.bin
-odm/firmware/fastchg/20838/oplus_vooc_fw_rk826.bin
-odm/firmware/fastchg/21615/oplus_vooc_fw_rk826.bin
-odm/firmware/fastchg/21619/oplus_vooc_fw_rk826.bin
-odm/firmware/fastchg/2161A/oplus_vooc_fw_rk826.bin
-odm/firmware/fastchg/2169A/oplus_vooc_fw_rk826.bin
-odm/firmware/fastchg/2169B/oplus_vooc_fw_rk826.bin
 
 # CNE
 vendor/app/CneApp/CneApp.apk
@@ -625,26 +585,14 @@ odm/bin/hw/vendor.oplus.hardware.biometrics.fingerprint@2.1-service
 odm/bin/init.oplus.fingerprints.sh
 odm/etc/init/vendor.oplus.hardware.biometrics.fingerprint@2.1-service.rc
 odm/etc/vintf/manifest/manifest_oplus_fingerprint.xml
-odm/lib64/hw/fingerprint.18821_goodix9508_G2_4.default.so
-odm/lib64/hw/fingerprint.18857_goodix9508_G2_4.default.so
-odm/lib64/hw/fingerprint.18865_goodix9558_G3.default.so
 odm/lib64/hw/fingerprint.19805_goodix9638_G6_3.default.so
 odm/lib64/hw/fingerprint.19805_goodix9678_G6_7.default.so
-odm/lib64/hw/fingerprint.19811_goodix9638_G6.default.so
-odm/lib64/hw/fingerprint.20801_goodix9558_G3.default.so
 odm/lib64/hw/fingerprint.20828_goodix9678.default.so
 odm/lib64/hw/fingerprint.goodix9608_G5.default.so
-odm/lib64/hw/fingerprint.goodix9638_G6.default.so
 odm/lib64/libgf_hal_19805_G6_3_oplus.so
 odm/lib64/libgf_hal_19805_G6_7_oplus.so
-odm/lib64/libgf_hal_19811_G6_oplus.so
 odm/lib64/libgf_hal_20828_G6_7_oplus.so
-odm/lib64/libgf_hal_G5_oplus.so
 odm/lib64/libgf_hal_G6_oplus.so
-odm/lib64/libgf_ud_hal_18821_G2_4_oplus.so
-odm/lib64/libgf_ud_hal_18857_G2_4_oplus.so
-odm/lib64/libgf_ud_hal_18865_G3_oplus.so
-odm/lib64/libgf_ud_hal_20801_G3_oplus.so
 odm/lib64/vendor.oplus.hardware.commondcs@1.0.so
 
 # Fingerprint firmware
@@ -1355,52 +1303,15 @@ vendor/etc/init/init.time_daemon.rc
 vendor/lib64/libtime_genoff.so
 
 # Touchscreen firmware
-odm/firmware/tp/19065/FW_S6SY791_SAMSUNG.bin
-odm/firmware/tp/19065/FW_S6SY791_SAMSUNG_FAE.bin
-odm/firmware/tp/19065/LIMIT_S6SY791_SAMSUNG.img
-odm/firmware/tp/19161/FW_S3908_BOE.img
-odm/firmware/tp/19161/FW_S6SY771_SAMSUNG.bin
-odm/firmware/tp/19161/FW_S6SY771_SAMSUNG_FAE.bin
-odm/firmware/tp/19161/LIMIT_S3908_BOE.img
-odm/firmware/tp/19161/LIMIT_S6SY771_SAMSUNG.img
-odm/firmware/tp/19795/FW_GT9886_SAMSUNG.img
-odm/firmware/tp/19795/FW_GT9886_SAMSUNG_FAE.img
-odm/firmware/tp/19795/LIMIT_GT9886_SAMSUNG.img
 odm/firmware/tp/19805/FW_S3908_SAMSUNG.img
 odm/firmware/tp/19805/FW_S3908_SAMSUNG_FAE.img
 odm/firmware/tp/19805/LIMIT_S3908_SAMSUNG.img
-odm/firmware/tp/19811/FW_S6SY791_SAMSUNG.bin
-odm/firmware/tp/19811/FW_S6SY791_SAMSUNG_FAE.bin
-odm/firmware/tp/19811/LIMIT_S6SY791_SAMSUNG.img
-odm/firmware/tp/19821/FW_S6SY771_SAMSUNG.bin
-odm/firmware/tp/19821/FW_S6SY771_SAMSUNG_FAE.bin
-odm/firmware/tp/19821/FW_S6SY771_SAMSUNG_sys_edge_touch_config.bin
-odm/firmware/tp/19821/LIMIT_S6SY771_SAMSUNG.img
-odm/firmware/tp/19855/FW_S6SY771_SAMSUNG.bin
-odm/firmware/tp/19855/FW_S6SY771_SAMSUNG_FAE.bin
-odm/firmware/tp/19855/FW_S6SY771_SAMSUNG_sys_edge_touch_config.bin
-odm/firmware/tp/19855/LIMIT_S6SY771_SAMSUNG.img
-odm/firmware/tp/20061/FW_S3908_SAMSUNG.img
-odm/firmware/tp/20061/FW_S3908_SAMSUNG_FAE.img
-odm/firmware/tp/20061/LIMIT_S3908_SAMSUNG.img
-odm/firmware/tp/20135/FW_S6SY792_SAMSUNG.bin
-odm/firmware/tp/20135/FW_S6SY792_SAMSUNG_FAE.bin
-odm/firmware/tp/20135/LIMIT_S6SY792_SAMSUNG.img
-odm/firmware/tp/20161/FW_S6SY792_SAMSUNG.bin
-odm/firmware/tp/20161/FW_S6SY792_SAMSUNG_FAE.bin
-odm/firmware/tp/20161/LIMIT_S6SY792_SAMSUNG.img
 odm/firmware/tp/20809/FW_S3908_SAMSUNG.img
 odm/firmware/tp/20809/FW_S3908_SAMSUNG_FAE.img
 odm/firmware/tp/20809/LIMIT_S3908_SAMSUNG.img
 odm/firmware/tp/20828/FW_S3908_SAMSUNG.img
 odm/firmware/tp/20828/FW_S3908_SAMSUNG_FAE.img
 odm/firmware/tp/20828/LIMIT_S3908_SAMSUNG.img
-odm/firmware/tp/21615/FW_S6SY792_SAMSUNG.bin
-odm/firmware/tp/21615/FW_S6SY792_SAMSUNG_FAE.bin
-odm/firmware/tp/21615/LIMIT_S6SY792_SAMSUNG.img
-odm/firmware/tp/21619/FW_S3908_SAMSUNG.img
-odm/firmware/tp/21619/FW_S3908_SAMSUNG_FAE.img
-odm/firmware/tp/21619/LIMIT_S3908_SAMSUNG.img
 
 # Trusted Execution Environment connector
 vendor/bin/hw/vendor.qti.hardware.qteeconnector@1.0-service
