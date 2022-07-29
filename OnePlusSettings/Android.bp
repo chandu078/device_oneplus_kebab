@@ -1,0 +1,48 @@
+//
+// Copyright (C) 2022 The Nameless-AOSP Project
+//
+// SPDX-License-Identifier: Apache-2.0
+//
+
+android_app {
+    name: "OnePlusSettings",
+
+    defaults: [
+        "SettingsLibDefaults",
+    ],
+    certificate: "platform",
+    platform_apis: true,
+    system_ext_specific: true,
+    privileged: true,
+    srcs: [
+        "src/**/*.aidl",
+        "src/**/*.java",
+        "src/**/*.kt",
+    ],
+    static_libs: [
+        "androidx.core_core",
+        "androidx.preference_preference",
+    ],
+    required: [
+        "privapp_whitelist_oneplussettings",
+    ],
+    resource_dirs: ["res"],
+    optimize: {
+        proguard_flags_files: ["proguard.flags"],
+    },
+}
+
+prebuilt_etc {
+    name: "privapp_whitelist_oneplussettings",
+    sub_dir: "permissions",
+    src: "privapp-permissions-oneplussettings.xml",
+    filename_from_src: true,
+    system_ext_specific: true,
+}
+
+sh_binary {
+    name: "tri-state-key-calibrate",
+    init_rc: ["tri-state-key-calibrate.rc"],
+    src: "tri-state-key-calibrate.sh",
+    vendor: true,
+}

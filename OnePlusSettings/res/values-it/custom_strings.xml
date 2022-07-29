@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2022 The Nameless-AOSP Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Device Settings -->
+    <string name="device_title">Impostazioni OnePlus</string>
+    <string name="device_summary">Regola le impostazioni specifiche del dispositivo OnePlus</string>
+    <!-- Alert Slider -->
+    <string name="slider_title">Cursore Avviso</string>
+    <string name="mute_media_title">Silenzia il volume multimediale in modalità silenziosa</string>
+    <string name="mute_media_summary">Questo avrà effetto solo per gli altoparlanti</string>
+    <!-- Display Modes -->
+    <string name="display_title">Modalità Display</string>
+    <string name="hbm_mode_summary">Attiva immediatamente la luminanza massima del display</string>
+    <string name="hbm_mode_title">Alta luminosità</string>
+    <string name="auto_hbm_summary">Abilita il picco luminanza basata sulla luce solare</string>
+    <string name="auto_hbm_title">Alta luminosità automatica</string>
+    <string name="auto_hbm_threshold_title">Soglia alta luminosità automatica (lux)</string>
+    <string name="auto_hbm_threshold_summary">Regola il picco della luminanza del display </string>
+    <string name="tile_hbm_mode">Alta luminosità</string>
+    <string name="dc_mode_summary">Diminuisci la retroilluminazione regolando la corrente CC disegnata sul display</string>
+    <string name="dc_mode_title">DC Dimming</string>
+    <!-- Dolby -->
+    <string name="dolby_category">Dolby</string>
+    <string name="dolby_title">Dolby Atmos</string>
+    <string name="dolby_summary">Configura l\'uscita audio in base al contenuto multimediale</string>
+    <!-- Doze -->
+    <string name="doze_panel_title">Doze</string>
+    <!-- FPS Info -->
+    <string name="fps_title">Info FPS</string>
+    <string name="fps_info_title">FPS overlay</string>
+    <string name="fps_info_summary">Mostra sovrapposizione con fotogrammi al secondo correnti</string>
+    <string name="fps_info_color_title">Colore del testo</string>
+    <string name="fps_info_color_green">Verde</string>
+    <string name="fps_info_color_red">Rosso</string>
+    <string name="fps_info_color_blue">Blu</string>
+    <string name="fps_info_color_yellow">Giallo</string>
+    <string name="fps_info_color_black">Nero</string>
+    <string name="fps_info_color_accent">Segui il sistema</string>
+    <string name="fps_info_position_title">Posizione di sovrapposizione</string>
+    <string name="fps_info_position_top_left">Top left</string>
+    <string name="fps_info_position_top_center">Top center</string>
+    <string name="fps_info_position_top_right">Top right</string>
+    <string name="fps_info_position_bottom_left">Bottom left</string>
+    <string name="fps_info_position_bottom_center">Bottom center</string>
+    <string name="fps_info_position_bottom_right">Bottom right</string>
+    <string name="fps_info_text_size_title">Dimensione del testo</string>
+    <!-- Touchpanel -->
+    <string name="touchpanel_title">Pannello touch</string>
+    <string name="game_mode_title">Modalità di gioco</string>
+    <string name="game_mode_summary">Aumenta la frequenza di campionamento del tocco per tutte le applicazioni</string>
+    <string name="game_mode_warning">Increases power consumption</string>
+    <!-- Unsupported feature -->
+    <string name="unsupported_feature">Questa funzione non è disponibile nel kernel corrente</string>
+    <!-- Vibration Strength -->
+    <string name="category_vibrator">Vibrazione</string>
+    <string name="vib_strength_title_head">Intensità</string>
+    <string name="vib_strength_summary_head">Definisci l\'intensità della vibrazione</string>
+</resources>
