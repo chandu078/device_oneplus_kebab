@@ -7,6 +7,10 @@ on early-init
     # Audio Driver
     exec u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules audio_extend audio_max98937 audio_tfa98xx-v6 audio_ak4376
 
+on post-fs
+    # System Vibration
+    chown system system /sys/devices/platform/soc/a8c000.i2c/i2c-6/6-005a/leds/vibrator/level
+
 on fs
     # Charger
     write /proc/ui_soc_decimal 1
@@ -45,8 +49,20 @@ on boot
     chown system system /sys/kernel/oplus_display/panel_serial_number
     chown system system /sys/kernel/oplus_display/power_current
 
+    # Measured FPS
+    chown system system /sys/class/drm/sde-crtc-0/measured_fps
+
+    # High Touch Sample
+    chown system system /proc/touchpanel/game_switch_enable
+
     # Sensors
     chown system system /sys/devices/platform/soc/soc:sensor_fb/adsp_notify
+
+    # TP Edge Touch Limit
+    chown system system /proc/touchpanel/oplus_tp_direction
+    chown system system /proc/touchpanel/oplus_tp_limit_enable
+    chown system system /proc/touchpanel/oplus_tp_limit_whitelist
+    write /proc/touchpanel/oplus_tp_limit_enable 0
 
 on property:ro.boot.prjname=*
     # Display
