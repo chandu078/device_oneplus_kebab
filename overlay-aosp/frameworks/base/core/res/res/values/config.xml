@@ -13,13 +13,13 @@
     <!-- Paths to the libraries that contain device specific key handlers -->
     <string-array name="config_deviceKeyHandlerLibs" translatable="false">
         <item>/system_ext/priv-app/TouchGestures/TouchGestures.apk</item>
-        <item>/system_ext/app/KeyHandler/KeyHandler.apk</item>
+        <item>/system_ext/priv-app/OnePlusSettings/OnePlusSettings.apk</item>
     </string-array>
 
     <!-- Names of the key handler classes -->
     <string-array name="config_deviceKeyHandlerClasses" translatable="false">
         <item>com.android.touch.gestures.KeyHandler</item>
-        <item>org.lineageos.lineageparts.gestures.KeyHandler</item>
+        <item>org.nameless.device.OnePlusSettings.Services.KeyHandler</item>
     </string-array>
 
     <!-- The location of the devices physical tri state switch

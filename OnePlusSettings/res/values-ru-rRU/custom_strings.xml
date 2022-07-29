@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2022 The Nameless-AOSP Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Alert Slider -->
+    <string name="slider_title">Слайдер оповещений</string>
+    <string name="mute_media_title">Приглушение громкости мультимедиа</string>
+    <string name="mute_media_summary">Заглушить громкость мультимедиа, если ползунок оповещения установлен в положение \"Без звука\"</string>
+    <string name="mute_media_warning">Это воздействует только на динамик</string>
+    <!-- Custom seekbar -->
+    <string name="custom_seekbar_value">Значение: <xliff:g id="v">%s</xliff:g></string>
+    <string name="custom_seekbar_default_value">По умолчанию</string>
+    <string name="custom_seekbar_default_value_to_set">Значение по умолчанию: <xliff:g id="v">%s</xliff:g>\nДлительное нажатие для установки</string>
+    <string name="custom_seekbar_default_value_is_set">Значение по умолчанию установлено</string>
+    <!-- Device Settings -->
+    <string name="device_title">Настройки OnePlus</string>
+    <string name="device_summary">Настройка специфических параметров устройства OnePlus</string>
+    <!-- Display Modes -->
+    <string name="display_title">Режимы экрана</string>
+    <string name="hbm_mode_summary">Мгновенное включение пиковой яркости дисплея</string>
+    <string name="hbm_mode_title">Высокая яркость</string>
+    <string name="auto_hbm_summary">Включить пиковую яркость на солнечном свете</string>
+    <string name="auto_hbm_title">Автоматическая Высокая яркость</string>
+    <string name="auto_hbm_threshold_title">Автоматический Верхний порог яркости (люкс)</string>
+    <string name="auto_hbm_threshold_summary">Автоматический порог высокой яркости (люкс) </string>
+    <string name="tile_hbm_mode">Высокая яркость</string>
+    <string name="dc_mode_summary">Регулировка яркости подсветки путем изменения постоянного тока, подаваемого на дисплей</string>
+    <string name="dc_mode_title">Регулировка постоянного тока</string>
+    <!-- Dolby -->
+    <string name="dolby_category">Dolby</string>
+    <string name="dolby_title">Dolby Atmos</string>
+    <string name="dolby_summary">Настройка аудиовыхода на основе медиаконтента</string>
+    <!-- Doze -->
+    <string name="doze_panel_title">Doze</string>
+    <!-- FPS Info -->
+    <string name="fps_title">Информация о FPS</string>
+    <string name="fps_info_title">Оверлей FPS</string>
+    <string name="fps_info_summary">Показывать наложение с текущей частотой кадров в секунду</string>
+    <string name="fps_info_color_title">Цвет текста</string>
+    <string name="fps_info_color_green">Зеленый</string>
+    <string name="fps_info_color_red">Красный</string>
+    <string name="fps_info_color_blue">Голубой</string>
+    <string name="fps_info_color_yellow">Желтый</string>
+    <string name="fps_info_color_black">Черный</string>
+    <string name="fps_info_color_accent">Следование системе</string>
+    <string name="fps_info_position_title">Позиция надстройки</string>
+    <string name="fps_info_position_top_left">Слева вверху</string>
+    <string name="fps_info_position_top_center">По центру сверху</string>
+    <string name="fps_info_position_top_right">Справа вверху</string>
+    <string name="fps_info_position_bottom_left">Слева внизу</string>
+    <string name="fps_info_position_bottom_center">По центру снизу</string>
+    <string name="fps_info_position_bottom_right">Справа внизу</string>
+    <string name="fps_info_text_size_title">Размер текста</string>
+    <!-- Network -->
+    <string name="network_title">Сеть</string>
+    <string name="nr_mode_switcher_title">Переключатель режимов 5G</string>
+    <string name="nsa_only">Только NSA</string>
+    <string name="sa_only">Только SA</string>
+    <string name="nsa_sa">NSA + SA</string>
+    <string name="nr_mode_switcher_warning">Пожалуйста, повторите настройку после перезагрузки/изменения данных sim-карты</string>
+    <string name="service_not_ready">Сервис не готов, попробуйте еще раз</string>
+    <string name="unavailable_sim_slot">Невозможно получить текущий слот мобильных данных, пожалуйста, попробуйте еще раз</string>
+    <!-- Touchpanel -->
+    <string name="touchpanel_title">Сенсорная панель</string>
+    <string name="game_mode_title">Высокая сенсорная частота</string>
+    <string name="game_mode_summary">Повышение частоты опроса прикосновений для всех приложений</string>
+    <string name="game_mode_warning">Увеличивает энергопотребление</string>
+    <string name="edge_touch_title">Неограниченное касание краев</string>
+    <string name="edge_touch_summary">Улучшение работы мультитач в играх</string>
+    <string name="edge_touch_warning">Увеличивает вероятность случайного прикосновения</string>
+    <!-- Unsupported feature -->
+    <string name="unsupported_feature">Эта функция недоступна на текущем ядре</string>
+    <!-- Vibration Strength -->
+    <string name="category_vibrator">Вибрация</string>
+    <string name="vib_strength_title_head">Сила вибрации</string>
+    <string name="vib_strength_summary_head">Выберите силу вибрации</string>
+</resources>

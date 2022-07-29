@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2018, 2021-2022 The LineageOS Project
+     Copyright (C) 2022 The Nameless-AOSP Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          android:sharedUserId="android.uid.system"
+          package="org.nameless.device.OnePlusSettings"
+          android:versionCode="2"
+          android:versionName="2.0" >
+
+    <uses-permission android:name="android.permission.INJECT_EVENTS" />
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="com.qualcomm.permission.USE_QCRIL_MSG_TUNNEL" />
+
+    <protected-broadcast android:name="com.android.systemui.doze.pulse" />
+    <protected-broadcast android:name="org.nameless.device.OnePlusSettings.UPDATE_FPS_SETTINGS" />
+
+    <uses-sdk
+        android:minSdkVersion="30"
+        android:targetSdkVersion="31" />
+
+    <application
+        android:defaultToDeviceProtectedStorage="true"
+        android:directBootAware="true"
+        android:icon="@drawable/ic_logo"
+        android:label="@string/device_title"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.SubSettingsBase"
+        android:exported="true">
+
+        <!-- OnePlusSettings Activity -->
+        <activity
+            android:name="org.nameless.device.OnePlusSettings.MainSettingsActivity"
+            android:label="@string/device_title"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.settings.action.EXTRA_SETTINGS" />
+            </intent-filter>
+            <meta-data
+                android:name="com.android.settings.icon"
+                android:resource="@drawable/ic_settings_device" />
+            <meta-data
+                android:name="com.android.settings.category"
+                android:value="com.android.settings.category.ia.homepage" />
+            <meta-data android:name="com.android.settings.summary"
+                android:resource="@string/device_summary" />
+        </activity>
+
+        <receiver
+            android:name="org.nameless.device.OnePlusSettings.Services.Startup"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.LOCKED_BOOT_COMPLETED" />
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <!-- DC-Dimming Tile -->
+        <service
+            android:name="org.nameless.device.OnePlusSettings.Tiles.DCModeTileService"
+            android:icon="@drawable/ic_dc_mode"
+            android:label="@string/dc_mode_title"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"
+            android:exported="true">
+            <intent-filter>
+                <action
+                    android:name="android.service.quicksettings.action.QS_TILE" />
+            </intent-filter>
+        </service>
+
+        <!-- OnePlusSettings Tile -->
+        <service
+            android:name="org.nameless.device.OnePlusSettings.Tiles.OnePlusSettingsTileService"
+            android:icon="@drawable/ic_settings_device_qs"
+            android:label="@string/device_title"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"
+            android:exported="true">
+            <intent-filter>
+                <action
+                    android:name="android.service.quicksettings.action.QS_TILE" />
+            </intent-filter>
+        </service>
+
+        <!-- DozeSettings Activity -->
+        <activity
+            android:name="org.nameless.device.OnePlusSettings.Doze.DozeSettingsActivity"
+            android:exported="true"
+            android:label="@string/ambient_display_title"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- Doze Service -->
+            <service android:name="org.nameless.device.OnePlusSettings.Services.DozeService"
+                android:permission="OneplusDozeService"
+                android:exported="false">
+        </service>
+
+        <!-- DozeSettings Tile -->
+        <service
+            android:name="org.nameless.device.OnePlusSettings.Tiles.DozeTileService"
+            android:icon="@drawable/ic_eye"
+            android:label="@string/ambient_display_gestures_title"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"
+            android:exported="true">
+            <intent-filter>
+                <action
+                    android:name="android.service.quicksettings.action.QS_TILE" />
+            </intent-filter>
+        </service>
+
+        <!-- Edge Touch Tile -->
+        <service
+            android:name="org.nameless.device.OnePlusSettings.Tiles.EdgeTouchTileService"
+            android:icon="@drawable/ic_edge_touch"
+            android:label="@string/edge_touch_title"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"
+            android:exported="true">
+            <intent-filter>
+                <action
+                    android:name="android.service.quicksettings.action.QS_TILE"/>
+            </intent-filter>
+        </service>
+
+        <!-- FPS Info Service -->
+        <service android:name="org.nameless.device.OnePlusSettings.Services.FPSInfoService"
+            android:exported="false" />
+
+        <!-- FPS Tile -->
+        <service
+            android:name="org.nameless.device.OnePlusSettings.Tiles.FPSTileService"
+            android:icon="@drawable/ic_fps_overlay"
+            android:label="@string/fps_info_title"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"
+            android:exported="true">
+            <intent-filter>
+                <action
+                    android:name="android.service.quicksettings.action.QS_TILE" />
+            </intent-filter>
+        </service>
+
+        <!-- Game Mode Tile -->
+        <service
+            android:name="org.nameless.device.OnePlusSettings.Tiles.GameModeTileService"
+            android:icon="@drawable/ic_game_mode"
+            android:label="@string/game_mode_title"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"
+            android:exported="true">
+            <intent-filter>
+                <action
+                    android:name="android.service.quicksettings.action.QS_TILE"/>
+            </intent-filter>
+        </service>
+
+        <!-- HBM Service -->
+        <service android:name="org.nameless.device.OnePlusSettings.Services.HBMModeService"
+            android:exported="false" />
+
+        <!-- HBM Tile -->
+        <service
+            android:name="org.nameless.device.OnePlusSettings.Tiles.HBMModeTileService"
+            android:icon="@drawable/ic_hbm_mode"
+            android:label="@string/tile_hbm_mode"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"
+            android:exported="true">
+            <intent-filter>
+                <action
+                    android:name="android.service.quicksettings.action.QS_TILE" />
+            </intent-filter>
+        </service>
+
+        <!-- Auto HBM Service -->
+        <service android:name="org.nameless.device.OnePlusSettings.Services.AutoHBMService"
+            android:exported="false" />
+
+        <!-- Search Indexing -->
+        <provider
+            android:name="org.nameless.device.OnePlusSettings.ConfigPanelSearchIndexablesProvider"
+            android:authorities="org.aosp.device"
+            android:multiprocess="false"
+            android:grantUriPermissions="true"
+            android:permission="android.permission.READ_SEARCH_INDEXABLES"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.content.action.SEARCH_INDEXABLES_PROVIDER" />
+            </intent-filter>
+        </provider>
+    </application>
+</manifest>
