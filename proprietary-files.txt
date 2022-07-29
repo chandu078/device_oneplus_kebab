@@ -23,6 +23,8 @@ vendor/lib64/libadsp_default_listener.so
 vendor/lib64/vendor.qti.hardware.dsp@1.0.so
 
 # ADSP modules (odm)
+odm/lib/rfsa/adsp/aiboost/libaiboostsr_skel_v66.so
+odm/lib/rfsa/adsp/aiboost/libaiboostubwc_skel.so
 odm/lib/rfsa/adsp/hta_lib/libhta_dsp_skel.so
 odm/lib/rfsa/adsp/libaiboost_skel.so
 odm/lib/rfsa/adsp/libaiboost_skel_v65.so
@@ -147,6 +149,11 @@ odm/etc/camera/calibrationOutput_uw.bin
 odm/etc/camera/distortion_result.bin
 odm/etc/camera/fb_default
 odm/etc/camera/fwk_config.json
+odm/lib/libaiboost_nnlib_sr.so
+odm/lib/libaiboost_sr.so
+odm/lib/libaiboost_ubwc.so
+odm/lib/libosie_process.so
+odm/lib/libosie_stub.so
 odm/lib64/camera/components/com.oneplus.node.cfrsnapshot.so
 odm/lib64/camera/components/com.oneplus.node.cfrvideo.so
 odm/lib64/camera/components/com.qti.stats.pdlib.so
@@ -171,6 +178,11 @@ odm/lib64/camera/fdconfigpreviewlite.bin
 odm/lib64/camera/fdconfigvideo.bin
 odm/lib64/camera/fdconfigvideolite.bin
 odm/lib64/libSonyIMX471RmscLibrary.so
+odm/lib64/libaiboost.so
+odm/lib64/libaiboost_hexagon.so
+odm/lib64/libaiboost_nnlib_sr.so
+odm/lib64/libaiboost_sr.so
+odm/lib64/libaiboost_ubwc.so
 odm/lib64/libfastov_dsp.so
 odm/lib64/libormshalclient.so
 odm/lib64/vendor.oplus.hardware.cammidasservice@1.0.so
