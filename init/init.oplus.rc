@@ -9,7 +9,6 @@ on early-init
 
 on fs
     # Charger
-    write /proc/fastchg_fw_update 1
     write /proc/ui_soc_decimal 1
 
     # Update touchpanel firmware in case we ship newer firmware in /odm
